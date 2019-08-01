@@ -18,7 +18,7 @@
 		width: 100%;
 		overflow: scroll;
 		border: 1px solid black;
-		min-height: 700px;
+		min-height: 500px;
 	}
 
 	.time-header__row {

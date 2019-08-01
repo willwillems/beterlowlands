@@ -8,16 +8,29 @@
 </script>
 
 <style>
+	#app {
+		border: 1px solid black;
+	}
+
 	main {
 		background-color: white;
-		box-sizing: border-box;
 		overflow-y: scroll;
 		position: relative;
 	}
+
+	@media (min-width: 600px) {
+		#app {
+			width: 360px;
+			height: 582px;
+			margin: 80px auto;
+		}
+	}
 </style>
 
-<Nav title="blokkenschema" bind:menuIsActive ></Nav>
-{#if menuIsActive} <Menu></Menu> {/if}
-<main>
-	<slot></slot>
-</main>
+<div id="app">
+	<Nav title="blokkenschema" bind:menuIsActive ></Nav>
+	{#if menuIsActive} <Menu></Menu> {/if}
+	<main>
+		<slot></slot>
+	</main>
+</div>
