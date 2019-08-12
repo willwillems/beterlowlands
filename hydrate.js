@@ -8,6 +8,7 @@
   const sqlite3 = require('sqlite3');
 
   const archiveLocation = '/tmp/schedule-archive'
+  const dataDir = 'src/data'
   const scheduleDbName = 'schedule_0.sqlite'
 
   // get data
@@ -25,7 +26,7 @@
 
   // import data
   console.info('setting up the sqlite database...')
-  
+
   const db = new sqlite3.Database(`${archiveLocation}/${scheduleDbName}`)
   const exporter = sqliteJson(db)
 
@@ -39,7 +40,9 @@
   }
 
   // get filepath for JSON data
-  const getFilePath = filename => `${__dirname}/src/data/${filename}`
+  const getFilePath = filename => `${__dirname}/${dataDir}/${filename}`
+  
+  if(!fs.existsSync(`${__dirname}/${dataDir}`)) fs.mkdirSync(`${__dirname}/${dataDir}`)
 
   console.info('processing DB data and exporting to JSON files...')
 
