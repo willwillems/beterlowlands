@@ -14,7 +14,7 @@
   await fetch('https://goevent.s3.amazonaws.com/lowlands/2019/latest/schedule.zip')
     .then(resp => {
       return new Promise((res, rej) => {
-        // pipe the response body into an unzipper and store it in temp
+        console.info('pipe-ing the response body into an unzipper and storeing it in temp...')
         resp.body
           .pipe(unzipper.Extract({ path: archiveLocation }))
           .on('error', rej)
@@ -24,6 +24,7 @@
     .catch(console.error)
 
   // import data
+  console.info('setting up the sqlite database...')
   const db = new sqlite3.Database(`${archiveLocation}/${scheduleDbName}`)
   const exporter = sqliteJson(db)
 
@@ -38,6 +39,8 @@
 
   // get filepath for JSON data
   const getFilePath = filename => `./src/data/${filename}`
+
+  console.info('processing DB data and exporting to JSON files...')
 
   getTableAsJSON('Shows')
     // filter out the keys we don't need and change other keys to camelCase
