@@ -1,6 +1,7 @@
 (async () => {
   'use strict'
   // import libs
+  const fso = require('fs')
   const fs = require('fs').promises
   const unzipper = require('unzipper');
   const fetch = require('node-fetch')
@@ -42,7 +43,7 @@
   // get filepath for JSON data
   const getFilePath = filename => `${__dirname}/${dataDir}/${filename}`
   
-  if(!fs.existsSync(`${__dirname}/${dataDir}`)) fs.mkdirSync(`${__dirname}/${dataDir}`)
+  if(!fso.existsSync(`${__dirname}/${dataDir}`)) fso.mkdirSync(`${__dirname}/${dataDir}`)
 
   console.info('processing DB data and exporting to JSON files...')
 
