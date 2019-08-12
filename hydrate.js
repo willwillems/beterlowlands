@@ -38,7 +38,7 @@
   }
 
   // get filepath for JSON data
-  const getFilePath = filename => `./src/data/${filename}`
+  const getFilePath = filename => `./${filename}`
 
   console.info('processing DB data and exporting to JSON files...')
 
