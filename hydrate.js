@@ -43,6 +43,7 @@
   // get filepath for JSON data
   const getFilePath = filename => `${__dirname}/${dataDir}/${filename}`
   
+  // fs does not auto create parent directories when writing to locations with missing ones
   if(!fso.existsSync(`${__dirname}/${dataDir}`)) fso.mkdirSync(`${__dirname}/${dataDir}`)
 
   console.info('processing DB data and exporting to JSON files...')
