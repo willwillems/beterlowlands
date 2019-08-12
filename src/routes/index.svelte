@@ -96,17 +96,9 @@ const createEventTimes = (events, eventTimes) => {
 
 const eventTimes = Object.values(events).map(stageEvents => createEventTimes(stageEvents, []))
 
-function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
-
 </script>
-	<TimeTableDayIndicator days="{['day 1', 'day 2']}"></TimeTableDayIndicator>
+
+	<TimeTableDayIndicator day="${['day 1', 'day 2']}"></TimeTableDayIndicator>
 	<div id="table-wrapper">
 		<!-- <div id="table-wrapper-stage">
 			<StageNameTable/>
