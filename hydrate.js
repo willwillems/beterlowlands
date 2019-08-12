@@ -25,6 +25,7 @@
 
   // import data
   console.info('setting up the sqlite database...')
+  
   const db = new sqlite3.Database(`${archiveLocation}/${scheduleDbName}`)
   const exporter = sqliteJson(db)
 
