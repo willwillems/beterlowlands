@@ -16,7 +16,7 @@
   await fetch('https://goevent.s3.amazonaws.com/lowlands/2019/latest/schedule.zip')
     .then(resp => {
       return new Promise((res, rej) => {
-        console.info('pipe-ing the response body into an unzipper and storeing it in temp...')
+        console.info('piping the response body into an unzipper and storing it in temp...')
         resp.body
           .pipe(unzipper.Extract({ path: archiveLocation }))
           .on('error', rej)
