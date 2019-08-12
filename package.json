@@ -4,8 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev --no-hot",
-    "build": "sapper build",
-    "export": "sapper export",
+    "hydrate": "node hydrate.js",
+    "build": "npm run hydrate && sapper build",
+    "export": "npm run hydrate && sapper export",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
@@ -14,13 +15,18 @@
   "dependencies": {
     "compression": "^1.7.1",
     "polka": "next",
+    "request": "^2.88.0",
     "sirv": "^0.4.0"
   },
   "devDependencies": {
+    "node-fetch": "^2.6.0",
     "npm-run-all": "^4.1.5",
     "sapper": "^0.27.0",
+    "sqlite-json": "^1.1.0",
+    "sqlite3": "^4.0.9",
     "svelte": "^3.0.0",
     "svelte-loader": "^2.9.0",
+    "unzipper": "^0.10.3",
     "webpack": "^4.7.0"
   }
 }
