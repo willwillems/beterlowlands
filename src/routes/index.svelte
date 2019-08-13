@@ -63,9 +63,9 @@
 import StageNameTable from '../components/StageNameTable.svelte';
 import TimeTableDayIndicator from '../components/TimeTableDayIndicator.svelte';
 
-const events = require('../data/events.json')
-const venues = require('../data/stages.json')
-const artists = require('../data/artists.json')
+const events 	= require('../../static/data/events.json')
+const venues 	= require('../../static/data/stages.json')
+const artists = require('../../static/data/artists.json')
 
 const times = new Array(24 * 2 * 4).fill(0).map((el, i) => new Date(1565944200000 + 1000 * 60 * 30 * i))
 

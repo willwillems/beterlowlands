@@ -8,12 +8,14 @@
   const sqliteJson = require('sqlite-json');
   const sqlite3 = require('sqlite3');
 
+  // define constants
+  const scheduleZipUrl = 'https://goevent.s3.amazonaws.com/lowlands/2019/latest/schedule.zip'
   const archiveLocation = '/tmp/schedule-archive'
-  const dataDir = 'src/data'
+  const dataDir = 'static/data'
   const scheduleDbName = 'schedule_0.sqlite'
 
   // get data
-  await fetch('https://goevent.s3.amazonaws.com/lowlands/2019/latest/schedule.zip')
+  await fetch(scheduleZipUrl)
     .then(resp => {
       return new Promise((res, rej) => {
         console.info('piping the response body into an unzipper and storing it in temp...')
@@ -25,9 +27,9 @@
     })
     .catch(console.error)
 
-  // import data
   console.info('setting up the sqlite database...')
 
+  // import data
   const db = new sqlite3.Database(`${archiveLocation}/${scheduleDbName}`)
   const exporter = sqliteJson(db)
 
@@ -44,7 +46,7 @@
   const getFilePath = filename => `${__dirname}/${dataDir}/${filename}`
   
   // fs does not auto create parent directories when writing to locations with missing ones
-  if(!fso.existsSync(`${__dirname}/${dataDir}`)) fso.mkdirSync(`${__dirname}/${dataDir}`)
+  if(!fso.existsSync(`${__dirname}/${dataDir}`)) (console.info(`creating ${dataDir}`), fso.mkdirSync(`${__dirname}/${dataDir}`))
 
   console.info('processing DB data and exporting to JSON files...')
 

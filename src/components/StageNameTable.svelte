@@ -9,10 +9,8 @@
 </style>
 
 <script>
-const events = require('../data/events.json')
-const venues = require('../data/stages.json')
-const artists = require('../data/artists.json')
-
+const events 	= require('../../static/data/events.json')
+const venues 	= require('../../static/data/stages.json')
 </script>
 
 <table>
