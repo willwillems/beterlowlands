@@ -96,14 +96,23 @@ const createEventTimes = (events, eventTimes) => {
 
 const eventTimes = Object.values(events).map(stageEvents => createEventTimes(stageEvents, []))
 
+const daynames = ['26 NOV - Dag 1', '27 NOV - Dag 2', '28 NOV - Dag 3', '29 NOV - Dag 4']
+let activeDay = daynames[0]
+const scrollHandler = e => {
+	if(e.target.scrollLeft < 3000) { return activeDay = daynames[0] }
+	if(e.target.scrollLeft < 6500) { return activeDay = daynames[1] }
+	if(e.target.scrollLeft < 10000) { return activeDay = daynames[2] }
+	if(e.target.scrollLeft < 13000) { return activeDay = daynames[3] }
+}
+
 </script>
 
-	<TimeTableDayIndicator day="${['day 1', 'day 2']}"></TimeTableDayIndicator>
+	<TimeTableDayIndicator day="{activeDay}"></TimeTableDayIndicator>
 	<div id="table-wrapper">
 		<!-- <div id="table-wrapper-stage">
 			<StageNameTable/>
 		</div> -->
-		<div id="table-wrapper-shows">
+		<div id="table-wrapper-shows" on:scroll="{scrollHandler}">
 			<table style="table-layout: fixed ; width: 100%;">
 				<thead>
 					<tr class="time-header__row">

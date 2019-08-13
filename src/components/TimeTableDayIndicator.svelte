@@ -22,5 +22,5 @@
 </style>
 
 <div class="day-indicator" >
-  <h2 class="day-indicator__title"> {'26 NOV - Dag 1'} </h2>
+  <h2 class="day-indicator__title"> {day} </h2>
 </div>
