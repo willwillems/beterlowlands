@@ -1,6 +1,6 @@
 <script>
   const menuItems = [
-    'Blokkenschema', 'Artists', 'Studio', 'About'
+    'Blokkenschema', 'Artists', 'Studio', 'About', '', '' 
   ]
 </script>
 
@@ -10,16 +10,19 @@
 		display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: flex-start;
     width: 100%;
+    height: calc(100vh - 50px);
 	}
 
 	.menu-tile {
 		width: calc(50vw - 1px);
-    height: 50vw;
+    height: 33%;
     background-color: white;
     border: solid 1px black;
     z-index: 10;
     padding: 20px 30px;
+    margin: 0;
   }
   
   @media (min-width: 600px) {
