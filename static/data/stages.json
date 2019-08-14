@@ -1,0 +1,744 @@
+[
+  {
+    "id": 338,
+    "title": "Wafels",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p>Ook voor zoetekauwen is het weer volop genieten met heerlijke warme, Belgische wafels. Maak het zo gek als je wil, met toppings als chocolade, slagroom, karamel en verse aardbeien. Dit alles natuurlijk volgens origineel Belgisch recept. Amai, da's lekker!</p>\r\n<p><br />✅ Vegetarische optie</p>\r\n<p></p>\r\n<p></p>",
+    "photoSuffix": "20190515050633_7e83cbea"
+  },
+  {
+    "id": 339,
+    "title": "Mexicaans",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Ontdek hier heerlijke Mexicaanse gerechten! Voor al je late night powerfood en early morning cravings. De nacho's zijn een echte festivalfavoriet. Bueno!</p>\r\n<p></p>\r\n<p>✅ Vegetarische optie<br />✅ Veganistische optie</p>",
+    "photoSuffix": "20190515050635_31317d0a"
+  },
+  {
+    "id": 340,
+    "title": "Turkse Specialiteiten",
+    "subtitle": "Locatie: Planet Paradise Middenplein",
+    "description": "<p>Al sinds jaar en dag serveert dit Turkse familiebedrijf de heerlijkste Kebab en Lachmacun, precies bereid zoals het hoort. Liever vegetarisch? Dan kun je hier terecht voor falafel: broodjes én salades!</p>\r\n<p></p>\r\n<p>✅ Vegetarische optie</p>\r\n<p><span>✅ Veganistische optie</span></p>",
+    "photoSuffix": "20190515050635_d3d03998"
+  },
+  {
+    "id": 341,
+    "title": "De Stoverij",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p><span>Onze Zuiderburen weten wel wat lekker is! Haal bij de Stoverij een lekkere portie frieten met in Belgisch bier gegaard stoofvlees.</span></p>",
+    "photoSuffix": "20190515050636_590c27e8"
+  },
+  {
+    "id": 342,
+    "title": "Fruit, Sappen en Salades",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p>Je dagelijkse portie vitaminen is misschien wel je allerbelangrijkste festivalessential! Scoor bij<span> </span><b>Fruit, Sappen en Salades</b><span> </span>de lekkerste verse sappen en smoothies, heerlijk vers fruit uit het vuistje, goed gevulde salades en verse dikbelegde sanwiches. Natuurlijk helemaal biologisch en fair trade. </p>\r\n<p></p>\r\n<p>✅ Vegetarische optie<br />✅ Veganistische optie</p>\r\n<p></p>",
+    "photoSuffix": "20190515050637_40509ccb"
+  },
+  {
+    "id": 343,
+    "title": "Swirls",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p>Kom langs bij<span> </span><b>Swirls</b><span> </span>voor heerlijk softijs, voorzien van toppings als vers fruit, chocolade, wafeltjes en nootjes. Moeite met kiezen? Neem ze allemaal! </p>\n<p></p>\n<p>✅ Vegetarische optie</p>",
+    "photoSuffix": "20190515050638_a6e8a418"
+  },
+  {
+    "id": 344,
+    "title": "Patat & Snacks",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p>Patat en snacks voor een lekkere vette bek! Natuurlijk vers voor je gesneden uit biologische aardappelen. </p>\r\n<p></p>\r\n<p>✅ Vegetarische optie<br />✅ Veganistische optie</p>",
+    "photoSuffix": "20190515050638_270d4fd8"
+  },
+  {
+    "id": 345,
+    "title": "Koffie: The Village Coffee",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p><span>Ook koffieleuten komen flink aan hun trekken opLowlands! Ga voor je dagelijkse shot caffeïne even langs bij </span><b>The Village Coffee</b><span>, waar deze Utrechtse baristas je een ambachtelijk gezet bakkie troost van zelf gebrande bonen voorschotelen. Enjoy!</span></p>",
+    "photoSuffix": "20190515050639_bab36c12"
+  },
+  {
+    "id": 346,
+    "title": "Hamburgers",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p>Cravings voor een heerlijk sappige hamburger? Geniet bij<span> </span><b>Black Angus Burger</b> van topkwaliteit burgers vervaardigd uit vers vlees van de Aberdeen Angus rund, précies lang genoeg gegrild, op een licht getoast broodje met huisgemaakte hamburgersaus. Liever geen vlees? Ga voor de vegetarische bietenburger. Licht verteerbaar en oh zo gezond.  Bon appétit!</p>\r\n<p></p>\r\n<p>✅ Vegetarische optie </p>",
+    "photoSuffix": "20190515050640_615c25d0"
+  },
+  {
+    "id": 347,
+    "title": "Cocktails by Bacardi",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p>Hier vind je een groot assortiment aan <span>wereldberoemde cocktails van Bacardi, </span>zowel met als zonder alcohol. Shaken, not stirred! </p>",
+    "photoSuffix": "20190515050641_110510da"
+  },
+  {
+    "id": 348,
+    "title": "Vietnamees",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p>De Vietnamese snacks en gerechten van<span> </span><b>Mr. Long</b><span> </span>zijn al jarenlang een begrip op allerlei festivals. Een snelle loempia of de welbekende Banh Xeo tussendoor? Of leg je liever een flinke bodem met een bord nasi of bami? Je bent hier aan het juiste adres!</p>\r\n<p></p>\r\n<p>✅ Vegetarische optie</p>\r\n<p></p>",
+    "photoSuffix": "20190515050642_50520633"
+  },
+  {
+    "id": 349,
+    "title": "Pizza",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": null,
+    "photoSuffix": "20190515050642_1bfbf5f4"
+  },
+  {
+    "id": 350,
+    "title": "Kebab/Lahmacun",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p>Al sinds jaar en dag serveert dit Turkse familiebedrijf de heerlijkste Kebab en Lachmacun, precies bereid zoals het hoort. Liever vegetarisch? Dan kun je hier terecht voor falafel: broodjes én salades!</p>\r\n<p></p>\r\n<p>✅ Vegetarische optie</p>\r\n<p><span>✅ Veganistische optie</span></p>",
+    "photoSuffix": "20190515050643_298b93f3"
+  },
+  {
+    "id": 351,
+    "title": "BBQ - Smokey Goodness",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p>De indrukwekkende Oaklahoma Smoker van<span> </span><b>Smokey Goodness</b> <b>BBQ</b><span> </span>mocht dit jaar niet ontbreken op Lowlands! Barbecueliefhebbers slaan hier hun slag met lekkere Amerikaanse barbecuegerechten, waaronder pulled pork en overheerlijke gegrilde groenten, op smaak gebracht met rook, vuur en passie.</p>\n<p></p>\n<p>✅ Vegetarische optie</p>",
+    "photoSuffix": "20190515050644_fd4d05b3"
+  },
+  {
+    "id": 353,
+    "title": "Crêpes",
+    "subtitle": "Locatie: ArmadiLLow",
+    "description": "<p>Een flinterdun gebakken crêpe kan natuurlijk op ieder moment van de dag: als ontbijt, brunch, lunch of tussendoortje, maar is misschien wel het állerlekkerste als toetje, voorzien van heerlijk zoete toppings en slagroom. Délicieux!</p>\n<p></p>\n<p>✅ Vegetarische optie</p>",
+    "photoSuffix": "20190515050645_a7b74eb5"
+  },
+  {
+    "id": 354,
+    "title": "Hans Worst",
+    "subtitle": "Locatie: ArmadiLLow",
+    "description": "<p><b>Hans Worst</b><span>, wie kent hem niet? Je bent bij deze rasechte Rotterdammer aan het juiste adres voor de allerlekkerste American Hotdog van Nederland: de Rotdog! Zeker een begrip in Rotterdam, waar hij zijn vaste standplaats aan de Coolsingel heeft. Geen gedoe, geen gezeur: gewoon dik, vet en lekker!</span></p>",
+    "photoSuffix": "20190515050646_c5bceff2"
+  },
+  {
+    "id": 355,
+    "title": "Keukengebeuren Fresh Asian",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p>Asian food is always good! Hier kun je  terecht voor een heerlijke springroll, een overheerlijke pad thai en een Thaise wrap. Eet smakelijk!</p>\r\n<p></p>\r\n<p><span>✅ Vegetarische optie</span></p>",
+    "photoSuffix": "20190515050647_147b9e0a"
+  },
+  {
+    "id": 356,
+    "title": "Empanada's",
+    "subtitle": "Locatie: ArmadiLLow",
+    "description": "<p>Hola! Hier kun je terecht voor heerlijke diverse empanada's.</p>\n<p></p>\n<p><span>✅ Vegetarische optie</span></p>",
+    "photoSuffix": "20190515050647_17765866"
+  },
+  {
+    "id": 357,
+    "title": "Exotic Bites Vega(n)",
+    "subtitle": "Locatie: ArmadiLLow",
+    "description": "<p>What's in a name: Heerlijke vega(n) gerechten in de Armadillow. Bekijk hier het menu:<br /><br />- Frikandel Speciaal (Vegan)<br />- Broodje kroket (Vegan)<br />- Hartig/zoete koek van aardappel en pastinaak, geserveerd met een zure room en kristal suiker. (Vegan)<br />- Groenteballetjes van diverse groenten met een hart van smeuïge kruidenkaas, geserveerd met een vegan mayonaise. (Vega)<br />- Mais pistolet belegd met eiersalade op basis van tofu en appel, met spinazie (Vegan)<br />- Pitabroodje gevuld met gyros van oesterzwam, geserveerd met een frisse huisgemaakte tzatziki saus. (Vegan)<br /><br /></p>\r\n<p>✅ Vegetarische optie</p>\r\n<p><span>✅ Veganistische optie</span></p>",
+    "photoSuffix": null
+  },
+  {
+    "id": 358,
+    "title": "Cocktails",
+    "subtitle": "Locatie: ArmadiLLow",
+    "description": "<p><span>Hier vind je een groot assortiment aan zowel cocktails met als zonder alcohol. Cheers!</span></p>",
+    "photoSuffix": "20190515050648_37a336d9"
+  },
+  {
+    "id": 359,
+    "title": "Asian Vegan",
+    "subtitle": "Locatie: East Street",
+    "description": "<p>De Aziatische keuken kent onwijs veel heerlijke opties voor veganisten! Geniet bij Asian Vegan van vers bereide maaltijden met o.a. tofu, tempé en lekker veel groente. </p>\n<p></p>\n<p>✅ Veganistisch</p>",
+    "photoSuffix": "20190515050649_a7af362b"
+  },
+  {
+    "id": 360,
+    "title": "Vietnamees",
+    "subtitle": "Locatie: East Street",
+    "description": "<p>De Vietnamese snacks en gerechten van<span> </span><b>Mr. Long</b><span> </span>zijn al jarenlang een begrip op allerlei festivals. Een snelle loempia of de welbekende Banh Xeo tussendoor? Of leg je liever een flinke bodem met een bord nasi of bami? Je bent hier aan het juiste adres!</p>\r\n<p></p>\r\n<p>✅ Vegetarische optie</p>",
+    "photoSuffix": "20190515050649_8c075f40"
+  },
+  {
+    "id": 361,
+    "title": "Ramen",
+    "subtitle": "Locatie: East Street",
+    "description": "<p>Comfort food ten top, deze Japanse noodlesoep van<span> </span><b>Hot Mama Hot</b>! Pak je moment en geniet van een smakelijke kop bouillon voorzien van verse groenten en ramen noodles. Lekker als lunch en diner, of zoals ze in Japan doen: als start van de dag tijdens ontbijt. Slurpze! </p>\r\n<p></p>\r\n<p>✅ Vegetarische optie<br />✅ Veganistische optie</p>",
+    "photoSuffix": "20190515050650_d4c44ecc"
+  },
+  {
+    "id": 362,
+    "title": "Old Scuola Pizza",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>In de gloeiendhete, met de hand gestookte houtovens bakken ze bij<span> </span><b>Old Scuola</b><span> </span>overheerlijke verse pizza's met knapperige dunne bodem. Iedere bodem wordt - zoals het hoort - met liefde en aandacht eerst even met de hand de lucht in geslingerd. Delizioso!</p>\n<p></p>\n<p>✅ Vegetarische optie</p>",
+    "photoSuffix": "20190515050651_7aeba890"
+  },
+  {
+    "id": 363,
+    "title": "Roll or Bowl",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Chefkok<span> </span><b>Sjors Spakenburg</b><span> </span>maakt het je niet makkelijk met al zijn smakelijke keuzes: ga je voor een roll of een bowl? Gevuld met steak, kip of tempé? En eet je liever met een Latijnse of Aziatische twist? Keuzestress!</p>\n<p></p>\n<p><span>✅ Vegetarische optie</span><br /><span>✅ Veganistische optie </span></p>",
+    "photoSuffix": "20190515050652_21703f7a"
+  },
+  {
+    "id": 364,
+    "title": "Rotisserie",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Terug op Lowlands:<span> </span><b>de Rotisserie</b>! Waan je even als god in Frankrijk op het uitgestrekte terras met langzaam gegaarde kip van het spit met bijpassende garnituur. Na het eten is het tijd om een balletje te gooien op naastliggende de Jeu-de-Boulesbaan. Amusez-vous!</p>\r\n<p></p>\r\n<p>✅ Vegetarische optie<br />✅ Veganistische optie</p>",
+    "photoSuffix": "20190515050652_f6012a08"
+  },
+  {
+    "id": 365,
+    "title": "Frozen Yoghurt",
+    "subtitle": "Locatie: Planet Paradise Middenplein",
+    "description": "<p>Een beker FroYo gaat er altijd wel in, toch? Heerlijk zacht, romig yoghurtijs met toppings naar keuze.</p>\n<p></p>\n<p>✅ Vegetarische optie</p>\n<p></p>",
+    "photoSuffix": "20190515050653_bc374586"
+  },
+  {
+    "id": 366,
+    "title": "Surinaams",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Liefhebbers van de Surinaamse keuken weten dit adresje in Lowlands Paradise al jaren te vinden. Uiteraard staat de Roti weer voor je klaar, maar wat dacht je van hun andere Surinaamse specialiteiten? En vergeet niet om te vragen om een likje Surinaamse sambal! Loeiheet, maar oh zo lekker! </p>\r\n<p></p>\r\n<p>✅ Vegetarische optie</p>\r\n<p></p>",
+    "photoSuffix": "20190515050653_3caf4d75"
+  },
+  {
+    "id": 367,
+    "title": "Thaïs",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Verslingerd geraakt aan de Thaise keuken? Dit is de place to be! Tip: ga voor de Thaise saté, heerlijk fris op smaak gebracht met citroengras. </p>\n<p></p>\n<p>✅ Vegetarische optie</p>",
+    "photoSuffix": "20190515050654_4c9bcbed"
+  },
+  {
+    "id": 368,
+    "title": "Rode Rozen & Taartjes",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Rode Rozen en Taartjes: jouw one stop shop voor de lekkerste ontbijtjes, taartjes, gebakjes, organische thee en (slow) coffee. Maximaal lekker! </p>\r\n<p></p>\r\n<p>✅ Vegetarische opties<br />✅ Veganistische opties<br />✅ Glutenvrije opties</p>",
+    "photoSuffix": "20190515050655_a4103d24"
+  },
+  {
+    "id": 369,
+    "title": "Fruit en Sappen",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Je dagelijkse portie vitaminen is misschien wel je allerbelangrijkste festivalessential! Scoor bij<span> </span><b>Fruit en Sappen</b><span> </span>de lekkerste verse sappen en smoothies en heerlijk vers fruit <span>en verse dikbelegde sanwiches. N</span>atuurlijk helemaal biologisch en fair trade. </p>\r\n<p></p>\r\n<p>✅ Vegetarische optie<br />✅ Veganistische optie</p>\r\n<p></p>",
+    "photoSuffix": "20190515050655_470ec42e"
+  },
+  {
+    "id": 370,
+    "title": "Pannenkoeken",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Lowlandspannenkoeken zijn door de jaren heen uitgegroeid tot een waar Lowlandsfenomeen. Hoe dat komt? Ze staan er al vijfentwintig jaar! Lekkere, oer-Hollandse pannenkoeken met poedersuiker en stroop. Liever een hartige maaltijd? Ze worden ook vers voor je bereid met kaas en spek. U vraagt, wij bakken. Roept u maar! </p>\r\n<p></p>\r\n<p>✅ Vegetarische optie</p>",
+    "photoSuffix": "20190515050657_16805066"
+  },
+  {
+    "id": 371,
+    "title": "Worsterij",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p><span>Ambachtelijke, huisgemaakte worsten volgens eigen receptuur. De vraag is niet óf je worst lust, maar hoeveel!</span></p>",
+    "photoSuffix": "20190515050657_73bb0ee5"
+  },
+  {
+    "id": 372,
+    "title": "Panini",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Proef de smaak van Italië, gewoon in de polder! Geniet van een getoasted broodje met verse ingrediënten, geheel volgens de Italiaanse traditie, bijv. belegd met mozzarella en parmaham. </p>\n<p></p>\n<p>✅ Vegetarische optie<br /><span>✅ Veganistische optie</span></p>",
+    "photoSuffix": "20190515050658_c48f9a7a"
+  },
+  {
+    "id": 374,
+    "title": "Stonehenge koffie en thee",
+    "subtitle": "Locatie: Planet Paradise Middenplein",
+    "description": "<p><span>De dagelijkse stop voor een kop koffie. Koekje erbij?</span></p>",
+    "photoSuffix": "20190515050659_f42ad226"
+  },
+  {
+    "id": 376,
+    "title": "Indiaas - curry",
+    "subtitle": "Locatie: Planet Paradise Middenplein",
+    "description": "<p>Dé plek voor heerlijke chicken- en groentecurries en samosa's, bereid volgens authentiek Indiaas familierecept. De porties zijn flink en natuurlijk lekker spicy.</p>\r\n<p></p>\r\n<p>✅ Vegetarische optie</p>\r\n<p></p>",
+    "photoSuffix": "20190515050701_c1191b50"
+  },
+  {
+    "id": 377,
+    "title": "Japans",
+    "subtitle": "Locatie: Planet Paradise Middenplein",
+    "description": "<p><span>Geniet hier van heel veel verschillende soorten sushi, yakitori en andere Japanse specaliteiten. Haal jouw portie to go of neem plaats aan de lopende band en laat de gerechtjes lekker jouw mond in rollen. </span></p>",
+    "photoSuffix": "20190515050701_630bde6a"
+  },
+  {
+    "id": 378,
+    "title": "Bitterballen",
+    "subtitle": "Locatie: Planet Paradise Middenplein",
+    "description": "<p>Geniet ook op Lowlands van deze oer-Hollandse borrelhap. En op Lowlands zijn ze niet alleen extra lekker, maar ook extra groot! </p>",
+    "photoSuffix": "20190515050702_a85008c9"
+  },
+  {
+    "id": 379,
+    "title": "Afro-Caribisch",
+    "subtitle": "Locatie: Planet Paradise Middenplein",
+    "description": "<p>Verschillende culturen en wereldkeukens komen samen! Hier geniet je o.a.van Surinaamse, Caribische en Afrikaanse gerechten. En extra leuk: het personeel is prachtig gekleed in kleurrijke klederdracht.</p>\n<p></p>\n<p>✅ Vegetarische optie</p>",
+    "photoSuffix": "20190515050703_079505dd"
+  },
+  {
+    "id": 380,
+    "title": "Kaasfondue",
+    "subtitle": "Locatie: Planet Paradise Middenplein",
+    "description": "<p>Kaas, kaas, en nóg meer kaas! Schuif aan en dip je groenten en je broodjes in een potje lekker smeuïge, warme, Nederlandse kaas. Oer-Hollandse fondue gezelligheid!</p>\n<p></p>\n<p>✅ Vegetarische optie</p>\n<p></p>",
+    "photoSuffix": "20190515050704_f80fc914"
+  },
+  {
+    "id": 381,
+    "title": "Indonesisch",
+    "subtitle": "Locatie: Planet Paradise Middenplein",
+    "description": "<p>Geniet hiervan de lekkerste indonesische specialiteiten, waaronder Gado Gado, nasischotels en natuurlijk authentiek bereide saté. In deze familietoko staan drie generaties klaar om je de lekkerste maaltijden voor te schotelen. </p>\n<p></p>\n<p>✅ Vegetarische optie</p>",
+    "photoSuffix": "20190515050704_aaccf496"
+  },
+  {
+    "id": 382,
+    "title": "Patat",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Patat voor een lekkere vette bek! Natuurlijk vers voor je gesneden uit biologische aardappelen. </p>\r\n<p></p>\r\n<p>✅ Vegetarische optie<br />✅ Veganistische optie</p>\r\n<p></p>",
+    "photoSuffix": "20190515050705_0f1b6cef"
+  },
+  {
+    "id": 383,
+    "title": "Meat Pie",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Onze Australische vriend Darren bakt al heel wat jaartjes de lekkerste hartige Australian Meat Pies op Lowlands, gevuld met kip, vlees of groenten. </p>\r\n<p></p>\r\n<p>✅ Vegetarische optie</p>",
+    "photoSuffix": "20190515050706_09705eaf"
+  },
+  {
+    "id": 384,
+    "title": "Açai Sapjes",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Toe aan een stoot energie? Dan ben je<span> </span><b>Açai</b><span> </span>aan het juiste adres! Scoor hier de meest uiteenlopende smoothies en sapjes, boordevol smaak en rijk aan vitaminen.</p>\n<p></p>\n<p>✅ Vegetarische optie<br />✅ Veganistische optie</p>",
+    "photoSuffix": "20190515050707_90eabf1d"
+  },
+  {
+    "id": 386,
+    "title": "The Feeders Pita's",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Vanuit hun zwarte caravan voorzien<span> </span><b>The Feeders</b><span> </span>je van de heerlijkste, gevulde pitabroodjes. De basis is simpel: een luchtig pitabroodje, gevuld met bijvoorbeeld biologische scharrelkip en lekker veel groente, afgetopt met verse yoghurtsaus. En natuurlijk is er ook een vegetarische optie!</p>\r\n<p></p>\r\n<p>✅ Vegetarische optie<br /><span>✅ Veganistische optie</span></p>\r\n<p></p>",
+    "photoSuffix": "20190515050708_040bc14d"
+  },
+  {
+    "id": 387,
+    "title": "Vrij Voedsel",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Ook voor Lowlanders met speciale dieetwensen is het festival een culinair feestje! Heb je een noten-, lactose- of glutenallergie? Dan kun jij bij Vrij Voedsel gegarandeerd met een gerust hart allergeenvrij genieten van de lekkerste gerechten.</p>\r\n<p></p>\r\n<p>✅ Glutenvrij<br />✅ Nootvrij<br />✅ Lactosevrij<br />✅ Vegetarische optie<br />✅ Veganistische optie<br /><br /></p>\r\n<p><span><br />-----</span></p>\r\n<p></p>\r\n<p>Supersoep</p>\r\n<p>Cheesebuns</p>\r\n<p>Mac &amp; cheese</p>\r\n<p>Spicy cole slaw &amp; pindasaus</p>\r\n<p>Cheesecake</p>\r\n<p>Chocobombs</p>",
+    "photoSuffix": "20190515050709_7d052ad5"
+  },
+  {
+    "id": 388,
+    "title": "Suikerspin",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": "<p>Haal het kind in je naar boven en huppel over Planet Paradise met een felroze, zoete bol suikergaren in je hand. Want zeg nou zelf: iedereen houdt toch van suikerpin?</p>\n<p></p>\n<p><span>✅ Vegetarische optie</span><br /><br /></p>",
+    "photoSuffix": "20190515050709_48ee8cd0"
+  },
+  {
+    "id": 389,
+    "title": "Churros",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": "<p>Deze gefrituurde Spaanse deeglekkernij is al jaren vaste kost op Lowlands en een must voor de echte zoetekauw. Voor welke topping kies jij?</p>\n<p></p>\n<p><span>✅ Vegetarische optie</span></p>",
+    "photoSuffix": "20190515050712_0fa575d5"
+  },
+  {
+    "id": 390,
+    "title": "Dutch Weed Burger",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": "<p><b>Dutch Weed Burger</b><span> is niet alleen superlekker, hij is daarnaast veganistisch en een van de gezondste hamburgers ter wereld: hij zit stampvol goede eiwitten en omega vetzuren. </span>De smaak wordt vervolmaakt door een fris romige Weed Sauce. Deze wordt gemaakt van biologische ingrediënten en is verrijkt met een prachtige, duurzame zeesla. </p>\r\n<p></p>\r\n<p>✅ Vegetarisch</p>\r\n<p><span><span>✅ Veganistisch</span></span></p>",
+    "photoSuffix": "20190515050712_c025eebe"
+  },
+  {
+    "id": 391,
+    "title": "Indonesian Streetfood",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": "<p>Even zin in iets anders? Neem hier een lekker kruidig, Indonesisch broodje rendang of babi ketjap. Of wat dacht je van een broodje Ajam Pedis? Uiteraard ook volop keus voor de vegetariërs!</p>\r\n<p></p>\r\n<p>✅ Vegetarische optie</p>",
+    "photoSuffix": "20190515050713_1f46a43c"
+  },
+  {
+    "id": 392,
+    "title": "Vietnamese Snacks",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": "<p>De Vietnamese snacks en gerechten van<span> </span><b>Mr. Long</b><span> </span>zijn al jarenlang een begrip op allerlei festivals. Een snelle loempia tussendoor? Of leg je liever een flinke bodem met een bord nasi of bami? Je bent hier aan het juiste adres!</p>\r\n<p></p>\r\n<p>✅ Vegetarische optie</p>",
+    "photoSuffix": "20190515050714_23b69702"
+  },
+  {
+    "id": 393,
+    "title": "Patat en Snacks",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": "<p>Patat en snacks voor een lekkere vette bek! Natuurlijk vers voor je gesneden uit biologische aardappelen. </p>\r\n<p></p>\r\n<p>✅ Vegetarische optie<br />✅ Veganistische optie</p>",
+    "photoSuffix": "20190515050714_867a14ea"
+  },
+  {
+    "id": 394,
+    "title": "Gebakken Vis",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": "<p>Al jaren bakken ze hier de beste kibbeling van Nederland! Of ga je liever voor een perfect gekruid lekkerbekje met saus? Om je vingers bij af te likken!</p>\r\n<p></p>",
+    "photoSuffix": "20190515050715_766a8467"
+  },
+  {
+    "id": 395,
+    "title": "Swirls",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": "<p>Kom langs bij<span> </span><b>Swirls</b><span> </span>voor heerlijk softijs, voorzien van toppings als vers fruit, chocolade, wafeltjes en nootjes. Moeite met kiezen? Neem ze allemaal! </p>\r\n<p></p>\r\n<p>✅ Vegetarische optie</p>\r\n<p></p>",
+    "photoSuffix": "20190515050716_9b1aedf2"
+  },
+  {
+    "id": 396,
+    "title": "Hamburgers",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": "<p>Cravings voor een heerlijk sappige hamburger? Geniet hier van topkwaliteit burgers vervaardigd uit vers vlees, précies lang genoeg gegrild, op een licht getoast broodje met huisgemaakte hamburgersaus. Liever geen vlees? Ga voor de vegetarische Veggie Green Burger. Licht verteerbaar en oh zo gezond. Bon appétit!</p>\n<p></p>\n<p>✅ Vegetarische optie </p>",
+    "photoSuffix": "20190515050717_1fced45e"
+  },
+  {
+    "id": 397,
+    "title": "Plenty Vegan",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": "<p>Bij<span> </span><b>Plenty</b><span> </span>worden de gerechten van de wereldberoemde Israëlisch-Britse chefkok Yotam Ottolenghi geserveerd. Vegetarisch én bewust! Zorgeloos genieten dus. Tip: proef de onwijs lekkere Zapiekanka! </p>\n<p></p>\n<p>✅ Vegetarisch<br />✅ Veganistische optie</p>\n<p></p>",
+    "photoSuffix": "20190515050718_6f7e3554"
+  },
+  {
+    "id": 398,
+    "title": "Cucina",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": "<p>Het beste van de Italiaanse keuken vind je hier! Op het menu staan een heerlijke pasta Funghi, pasta à la Amatriciana, Pasta Putanesca en Pollo à la Cacciatore.</p>\r\n<p></p>\r\n<p><span>✅ Vegetarische optie</span></p>",
+    "photoSuffix": "20190515050719_aeb88616"
+  },
+  {
+    "id": 399,
+    "title": "Zijpe Stijl - Visafslag",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": "<p><span>Verse vis! Welke vis? Dat hangt af van de vangst, want alles wordt vers van de visboot richting de keuken van </span><b>Zijpe Stijl</b><span><span> </span>op Lowlands verscheept. Zeebaars en makreel van de grill zullen vast niet ontbreken. Ook Fish &amp; Chips is hier volop verkrijgbaar! </span></p>",
+    "photoSuffix": "20190515050719_6dca0c34"
+  },
+  {
+    "id": 400,
+    "title": "Yoos Wereldse Koffie",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": "<p>Lekkere Koffie, thee en verse gebakken taart bij YOOS! Onze biologische koffie komt uit Ethiopie, onze melk is vers, onze taarten biologisch, en onze brownies zijn vegan!</p>",
+    "photoSuffix": "20190515050720_b445a717"
+  },
+  {
+    "id": 401,
+    "title": "Cocktailhuis",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": "<p>Hier vind je een groot assortiment aan zowel cocktails met als zonder alcohol. Cheers!</p>",
+    "photoSuffix": "20190515050721_d3e8cd02"
+  },
+  {
+    "id": 402,
+    "title": "Bitterballen",
+    "subtitle": "Locatie: Alpha heuvel",
+    "description": "<p>Geniet ook op Lowlands van deze oer-Hollandse borrelhap. En op Lowlands zijn ze niet alleen extra lekker, maar ook extra groot! </p>",
+    "photoSuffix": "20190515050721_70cfb35a"
+  },
+  {
+    "id": 403,
+    "title": "Vietnamees Fingerfood",
+    "subtitle": "Locatie: Alpha heuvel",
+    "description": "<p>De Vietnamese snacks en gerechten van<span> </span><b>Mr. Long</b><span> </span>zijn al jarenlang een begrip op allerlei festivals. Een snelle loempia tussendoor? Of leg je liever een flinke bodem met een bord nasi of bami? Je bent hier aan het juiste adres!</p>\n<p></p>\n<p>✅ Vegetarische optie</p>",
+    "photoSuffix": "20190515050722_ca91deca"
+  },
+  {
+    "id": 618,
+    "title": "Brasserie 2050",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>We hebben elkaar lief en vermenigvuldigen ons: dikke kans dat we daardoor tegen het jaar 2050 wereldwijd zo’n 10 miljard monden moeten voeden. Dit brengt ingewikkelde voedselvraagstukken met zich mee die in essentie neerkomen op hoe we meer, gezonder en duurzamer voedsel kunnen produceren. Rabobank zet zich al jaren actief in voor een toekomstbestendige aardbol en verrast je op Lowlands met Brasserie 2050, waar je kennismaakt met het eten uit de toekomst. Ontdek hoe een steak tartare of crème brulée uit de toekomst smaakt!</p>\r\n<p>Ook de stroomvoorziening van Brasserie 2050 komt rechtstreeks uit de toekomst. Brasserie 2050 wordt van energie voorzien door de Big Battery Box van Bredenoord in samenwerking met The Powershop. De container met accu’s kan energie opslaan uit zon, wind, het elektriciteitsnet en een aggregaat en op deze manier festivals stil en emissieloos van stroom voorzien. Energieopslag en batterijtechniek zijn onmisbaar in de energietransitie en toepassingen als de Big Battery Box zullen in 2050 dan ook volledig ingeburgerd zijn.</p>",
+    "photoSuffix": "20190718124830_be7d47b4"
+  },
+  {
+    "id": 620,
+    "title": "Koreaans",
+    "subtitle": "Locatie: East Street",
+    "description": "<p>Koreaans uit het noorden en zuiden! Met o.a. Bimibap Vega en Bimibap Bulgogi, Koreaanse kipvleugeltjes, BAO BUN Galbi- kim-chee, Bulgogi Roll.</p>",
+    "photoSuffix": null
+  },
+  {
+    "id": 862,
+    "title": "Syrisch",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p>Geniet van de heerlijke Syrische specialiteiten van <b>Mama's Keuken</b> , een foodtruck gerund door vluchtelingen uit Syrië.</p>\r\n<p><span>✅ Vegetarische optie <br />✅ Veganistische optie</span></p>",
+    "photoSuffix": "20190515050732_e25ccdd1"
+  },
+  {
+    "id": 863,
+    "title": "Koffiekoppen",
+    "subtitle": "Locatie: LLowzone",
+    "description": "<p><span>Heerlijke kopjes koffie en thee. Koekje erbij?</span></p>",
+    "photoSuffix": "20190515050733_dcc76986"
+  },
+  {
+    "id": 865,
+    "title": "IJssalon",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Ambachtelijk en heerlijk romig schepijs van Carte d'Or. Hoe veel bolletjes neem jij? </p>\n<p></p>",
+    "photoSuffix": null
+  },
+  {
+    "id": 866,
+    "title": "Foodcourt",
+    "subtitle": "Locatie: ArmadiLLow",
+    "description": "<p>Eet je het liefst van alles wat, maar heb je geen zin om over het festivalterrein te struinen, op zoek naar culinaire hoogstandjes? Kom dan naar de Foodcourt in de ArmadiLLow! Ruim 30 strekkende meters met powerfood als verschillende omeletten en gerechten met ei, goed belegde boterhammen, wentelteefjes, tosti's en quesedilla's. You name it, they've got it! <span>Het assortiment wisselt de hele dag door, van ontbijt tot lunch tot diner. </span></p>\n<p></p>\n<p>✅ Vegetarische optie</p>\n<p></p>",
+    "photoSuffix": null
+  },
+  {
+    "id": 868,
+    "title": "Desperados",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p>Desperados, ‘s werelds eerste bier met de spirit of tequila.</p>\n<p>Het bittere van bier gecombineerd met het zoete van tequila zorgt voor een ware smaakexplosie én is heerlijk verfrissend en daardoor perfect voor een zomers festival als Lowlands.</p>",
+    "photoSuffix": "20190515050735_2f35c297"
+  },
+  {
+    "id": 869,
+    "title": "Wijnbar",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p><span>Wijnliefhebbers komen geheel aan hun trekken bij de wijnbar op Planet Paradise. Hier worden enkel de meest verfijnde Duitse wijnen geschonken. Voor elke smaak en stemming is er bij onze oosterburen een passend wijntje geselecteerd, van een tintelend halfzoete Riesling, tot robuust fruitige Spätburgunder of een feestelijk bruisende Stekt. Prost!</span></p>",
+    "photoSuffix": "20190515050736_8d440d5e"
+  },
+  {
+    "id": 870,
+    "title": "Chaudfontaine Waterbar",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p><span>Proef hier het lichtbruisend mineraalwater van Chaudfontaine met natuurlijke fruitaroma's in de smaken citroen, pompelmoes &amp; cranberry, limoen &amp; munt en framboos &amp; limoen. Lekker verfrissend!</span></p>",
+    "photoSuffix": "20190515050737_2922aa50"
+  },
+  {
+    "id": 872,
+    "title": "Beer & Cider Market",
+    "subtitle": "Locatie: Planet Paradise Middenplein",
+    "description": "<p>Terug op Lowlands: de Beer &amp; Cider Market! <span>Hier drink je een selectie bijzondere bieren en diverse ciders.</span></p>",
+    "photoSuffix": "20190515050738_0efd5a9d"
+  },
+  {
+    "id": 873,
+    "title": "Fuze Tea Experience",
+    "subtitle": "Locatie: LLake Lowlands",
+    "description": "<p>Welkom in de <b>Fuze Tea Treehouse</b>, op het water nabij Alpha. In deze duurzame boomhut word je meegezogen in een interactieve en digitale wereld die al je zintuigen prikkelt. Ver van het Lowlandsgedruis ga je even op reis naar relaxtere oorden. Wat heet: met een flesje <b>Fuze Tea</b> aan je lippen neem je een figuurlijke duik in de wereld van fruit, thee en kruiden en nemen we je mee op reis door Fuze Tea land. Om een ontspannen sfeer te bewaken, kun je de hut met maximaal vier personen betreden. Jullie bezoek wordt afgesloten met een toffe foto waarbij met zestien camera's een GIF-animatie van jullie wordt gemaakt. Geheel verfrist en met nieuwe energie duik je daarna de Lowlandshectiek weer in. Tot zo! </p>",
+    "photoSuffix": "20190515050739_25dc6fef"
+  },
+  {
+    "id": 986,
+    "title": "Adonis",
+    "subtitle": null,
+    "description": null,
+    "photoSuffix": null
+  },
+  {
+    "id": 987,
+    "title": "X-Ray",
+    "subtitle": null,
+    "description": null,
+    "photoSuffix": null
+  },
+  {
+    "id": 1048,
+    "title": "Where's the beef?",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p><span>Deze </span><span>100% Vegan Burgers voldoen aan de #BigFatJuicy status om van te watertanden.<span> </span></span><span>Run fast, snack slow.</span><br /><br /><br /><span>✅ Vegetarische optie</span><br /><span>✅<span> </span></span><span>Veganistische<span> </span></span><span>optie</span></p>",
+    "photoSuffix": "20190718115807_a5cc7a9d"
+  },
+  {
+    "id": 1049,
+    "title": "Saté",
+    "subtitle": "Locatie: Armadillow",
+    "description": null,
+    "photoSuffix": null
+  },
+  {
+    "id": 1050,
+    "title": "Sushi",
+    "subtitle": "Locatie: Planet Paradise Middenplein",
+    "description": "<p>Sushiliefhebbers opgelet: tussen al het festivallen door kun je genieten van overheerlijke verse sushi. Waan jezelf eventjes in Japan en dip je uramaki maar in de soyasaus. Enjoy!</p>\r\n<p><span>✅ Vegetarische optie</span></p>",
+    "photoSuffix": "20190723073518_39861b9a"
+  },
+  {
+    "id": 1051,
+    "title": "La Terraza by Nespresso",
+    "subtitle": "Locatie: Planet Paradise Middenplein",
+    "description": "<p>Kom opladen bij koffiehoogtepunt La Terraza by Nespresso. Terwijl jij lekker op ons terras zit, word je op je wenken bediend met heerlijke koffie of coffee cocktails. Cheers!</p>",
+    "photoSuffix": "20190731051450_a3d63d37"
+  },
+  {
+    "id": 1052,
+    "title": "Vegan Pizza",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p>Ff wachten..Pizza!<br /><br /></p>\n<p>✅ Vegetarische optie</p>\n<p>✅ Veganistische optie</p>\n<p></p>",
+    "photoSuffix": null
+  },
+  {
+    "id": 1055,
+    "title": "Wrap & Rolling",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": null,
+    "photoSuffix": "20190718123333_97d077b3"
+  },
+  {
+    "id": 1056,
+    "title": "Thais",
+    "subtitle": "Locatie: Alpha-gebied",
+    "description": null,
+    "photoSuffix": "20190718123443_8bdb33fa"
+  },
+  {
+    "id": 1081,
+    "title": "Bravo",
+    "subtitle": null,
+    "description": null,
+    "photoSuffix": null
+  },
+  {
+    "id": 1082,
+    "title": "Heineken",
+    "subtitle": null,
+    "description": null,
+    "photoSuffix": null
+  },
+  {
+    "id": 1083,
+    "title": "Echo",
+    "subtitle": null,
+    "description": null,
+    "photoSuffix": null
+  },
+  {
+    "id": 1084,
+    "title": "Lima",
+    "subtitle": null,
+    "description": null,
+    "photoSuffix": null
+  },
+  {
+    "id": 1085,
+    "title": "Sexyland",
+    "subtitle": null,
+    "description": null,
+    "photoSuffix": null
+  },
+  {
+    "id": 1086,
+    "title": "Juliet",
+    "subtitle": null,
+    "description": null,
+    "photoSuffix": null
+  },
+  {
+    "id": 1087,
+    "title": "Hacienda",
+    "subtitle": null,
+    "description": null,
+    "photoSuffix": null
+  },
+  {
+    "id": 1088,
+    "title": "Alpha",
+    "subtitle": null,
+    "description": null,
+    "photoSuffix": null
+  },
+  {
+    "id": 1089,
+    "title": "India",
+    "subtitle": null,
+    "description": null,
+    "photoSuffix": null
+  },
+  {
+    "id": 1115,
+    "title": "Alissa + Nienke: Mirabilia",
+    "subtitle": null,
+    "description": "<p>Het Nederlandse ontwerpersduo Alissa van Asseldonk en Nienke Bongers werd gevormd op de Design Academy Eindhoven en brengt met bijzondere creaties licht in de duisternis op Lowlands. Op Planet Paradise tref je de elegante lichtobjecten Mirabilia, die hoog boven je uittorenen en je verbeelding met repeterende patronen op hol doen slaan.</p>",
+    "photoSuffix": "20190723095149_c3936663"
+  },
+  {
+    "id": 1116,
+    "title": "Alissa + Nienke: Hekekek",
+    "subtitle": null,
+    "description": "<p>Het Nederlandse ontwerpersduo Alissa van Asseldonk en Nienke Bongers werd gevormd op de Design Academy Eindhoven en brengt met bijzondere creaties licht in de duisternis op Lowlands. Langs de wandelroute aan Lake Lowlands, vind je het grensverleggende Hekekek dat je verrast met een oogstrelend spel van kleur en beweging, rechtstreeks uit de dynamische wereld van Alissa + Nienke.</p>",
+    "photoSuffix": "20190723095325_53a0db70"
+  },
+  {
+    "id": 1117,
+    "title": "Antigoon: Polargraff",
+    "subtitle": null,
+    "description": "<p><span>Robocop samengevoegd met een spuitbus, zo zou je deze kunstenaar kunnen zien. Antigoon maakt speciaal voor Lowlands een graffitimachine op Planet Paradise, die tijdens het festival op een hoge toren live in actie komt. Antigoon’s machine gaat gigantische doeken te lijf met twee hangplotters die computergestuurd grafische illustraties produceren. Man vs. Machine en vice versa, wie wint? Kijken staat vrij, maar een klein advies van ons bij windkracht 6 of hoger: neem je verfkleren mee.</span></p>",
+    "photoSuffix": "20190723091229_ccc365bc"
+  },
+  {
+    "id": 1118,
+    "title": "Centraal Museum: Duran Lantink",
+    "subtitle": null,
+    "description": "<p><span>Het Centraal Museum in Utrecht geeft een voorproefje van de eerste solotentoonstelling van modeontwerper Duran Lantink, die naam maakte met Janelle Monáe’s beroemde ‘vaginabroek’. Ook creëert de Nederlander uit restanten van de mode-industrie creëert spannende en innovatieve ontwerpen. Dompel je onder in zijn eclectische collectie en geniet ondertussen van de film The Bargain Hunters, die tot stand kwam met steun van het Centraal Museum en die Lantink samen maakte met de beroemde modefotograaf Nick Knight van SHOWstudio.</span></p>",
+    "photoSuffix": "20190723091318_da0c3772"
+  },
+  {
+    "id": 1119,
+    "title": "Fernando Sánchez Castillo: Statue of Liberty",
+    "subtitle": null,
+    "description": "<p><span>Zo hoog als het echte Vrijheidsbeeld in New York is die niet, maar met zijn vijf meter staat Fernando Sánchez Castillo’s vurenhouten Statue Of Liberty op Planet Paradise toch behoorlijk opvallend te wezen. Pal voor de Rabo Brasserie, want gepresenteerd door Rabobank, valt er trouwens nog meer op aan het gevaarte: subtiele maar radicale verschillen met het origineel, getriggerd door een nooit bevestigd gerucht dat de conceptversie van het Vrijheidsbeeld Afro-Amerikaans was. Waarmee Castillo overtuigende vraagtekens zet bij rol en functie van een dergelijk symbool.</span></p>",
+    "photoSuffix": "20190723091447_c21824ca"
+  },
+  {
+    "id": 1120,
+    "title": "Jason Myers: Trials of Gavin",
+    "subtitle": null,
+    "description": "<p>Vorig jaar stond-ie al aan de oever van Lake Lowlands, Jason Myers’ abstracte, carbonstalen sculptuur Trials Of Gavin uit de serie Visible Noise. Twintig meter hoog en bevroren in contraposthouding, alsof hij net een stap voorwaarts wilde zetten. Nu staat hij er nog, of weer, met zichtbare roestplekken die het ouder worden van onze generatie symboliseert. Een generatie die voortdurend worstelt met de voortschrijdende technologie, waar onze kinderen en kleinkinderen niet beter weten. Om bedachtzaam bij over het water te turen dus.</p>\n<p>© Jeroen Nooij </p>",
+    "photoSuffix": "20190723091614_d64357e3"
+  },
+  {
+    "id": 1121,
+    "title": "Michela Segato: The Condition of Air",
+    "subtitle": null,
+    "description": "<p><span>Adem in, adem uit… Bij de Italiaanse ontwerpster Michela Segato, die onlangs afstudeerde aan de Design Academy Eindhoven, draait alles om lucht. Lucht? Inderdaad! Gewone lucht, maar dan wel in een binnenband. Haar obsessie voor binnenbanden komt uit haar jeugd waar ze op de plaatselijks stortplaats miljoenen binnenbanden zag en waarvan slechts 40% wordt hergebruikt. De krachtige dynamiek van lucht in zo’n rubberen huid, samengeknepen, gebonden en bijeengehouden met een koord geeft prachtig verstilde kunstobjecten vol met spanning. Kunst op Planet Paradise die strak staat van de duurzaamheid.</span></p>",
+    "photoSuffix": "20190723092834_dfc69228"
+  },
+  {
+    "id": 1122,
+    "title": "Peter te Bos: LLowdog",
+    "subtitle": null,
+    "description": "<p>Volgens de huisregels van Lowlands worden huisdieren mede om hun eigen bestwil niet toegelaten tot het terrein. Hoe kan het dan dat er elk jaar toch een paar doorglippen? Op Cape Lowlands, vlak bij de ingang van het festivalterrein, staat naast de ArmadiLLow namelijk al een paar jaar parmantig de onverschrokken LLowdog van Peter te Bos je aan te kijken. Deze gigantische drievoeter is niet aan te lijnen en geeft al helemaal geen poot – maar draagt het DNA van Lowlands tot in het diepste van zijn roodstalen ziel.</p>\r\n<p><i>© Bart Heemskerk</i></p>",
+    "photoSuffix": "20190723091821_9aaa3d70"
+  },
+  {
+    "id": 1123,
+    "title": "Ronald A. Westerhuis: We are GOD",
+    "subtitle": null,
+    "description": "<p><span>Groot, groter, grootst, dat is het werk van Ronald Westerhuis. Vorig jaar kon je je nog vergapen aan zijn 9,5 meter hoge stapelsculptuur Stepping Stones, daarvoor aan Liquid en natuurlijk aan de bol RAWSOME!. Dit jaar doet hij er nog een schepje bovenop. Op Cape Lowlands voor X-Ray komt de kolossale eenpersoonskathedraal We are GOD van maar liefst 15 meter hoog te staan. In dit buizengewelf ga je op zoek naar de waarheid en jezelf. In dit buitengewelf ga je op zoek naar al je vragen in een gefragmenteerde spiegel, die dwingt tot zelfreflectie. Binnen vind je het antwoord op al je vragen in zijn nieuwste “Selfrefection”.  Vergeet je bidprentje bij de uitgang niet. Gaat heen en geloof in uzelf, amen!</span></p>",
+    "photoSuffix": "20190723091932_c60e596e"
+  },
+  {
+    "id": 1124,
+    "title": "Strijbos & Van Rijswijk: Rocking Chairs",
+    "subtitle": null,
+    "description": "<p>Schommelen op Lowlands. Dat kon al eerder, maar niet zoals nu: op het Alphaterrein in de Rocking Chairs, schommelstoelen die beweging omzetten in muziek. Spannende toverstoelen, onzichtbaar volgestouwd met speciaal ontwikkelde sensoren en luidsprekers, om complete composities mee te schommelen. Schommel met anderen om samen muziek te maken, zowel met je eigen bewegingen als met die van de stoelen, ook ten opzichte van elkaar. Een sterk staaltje schommelcommunicatie. Voor je het weet heb je je eigen schommelstoelband. Keep on rockin’ in the free world!</p>\r\n<p><i>© Menno van der Meulen</i></p>",
+    "photoSuffix": "20190723092116_777b2fde"
+  },
+  {
+    "id": 1125,
+    "title": "Tom Claassen: Mikkel",
+    "subtitle": null,
+    "description": "<p>Voor de derde achtereenvolgende keer kijkt hij weer uit over de Lowlandse jachtvelden: de reusachtige Mikkel, de koene ridder van piepschuim, kunststof en metaal. Ontzagwekkend en vertederend tegelijk, zoals al het werk van maker Tom Claassen. Tussen de Campingflights door, rust de samen met Museum de Fundatie aangekochte Mikkel in de beeldentuin van Kasteel Het Nijenhuis in Heino, zodat hij telkens verfrist in Biddinghuizen arriveert. Links naast Heineken kent hij zijn plek, van zijn tien meter hoge top tot zijn verankerde teen. Groet hem.</p>\r\n<p><i>© Presstigieux</i></p>",
+    "photoSuffix": "20190723092250_3b46328c"
+  },
+  {
+    "id": 1126,
+    "title": "Tom Claassen: Twee Broers en een Vriend",
+    "subtitle": null,
+    "description": "<p><span>Alsof ze een nacht lang hebben doorgehaald, zo liggen deze Twee Broers en een Vriend van Tom Claassen erbij op Planet Paradise. Deze gigantische Houten Klaasen doen geen vlieg kwaad en zijn totaal niet mensenschuw. Wel van vergankelijk materiaal, dus vlij jezelf ertegenaan voordat deze grote vriendelijke boomstamreuzen langzaam maar onherroepelijk vergaan in de vrije natuur. Claassen deed inspiratie voor zijn werk op in Denemarken en sindsdien zaagt hij samen met ontwerper Piet Hein Eek regelmatig nieuwe generaties houten vrienden.</span></p>",
+    "photoSuffix": "20190723092354_620f28ce"
+  },
+  {
+    "id": 1127,
+    "title": "Yasser Ballemans: The Soul Search Museum",
+    "subtitle": null,
+    "description": "<p><span><i>Dagelijks van 11:00 tot 20:00, Planet Paradise. </i></span></p>\r\n<p><span>Vaste Lowlanders kennen Yasser Ballemans nog wel van zijn monumentale Triomfboog. Op dezelfde Planet Paradise, maar dan richting camping, bestiert de Brabantse Amsterdammer nu The Soul Search Museum. Een bewaarplaats voor de ziel. Ook jóuw ziel, die je als bezoeker gevraagd wordt blind te kleien. Lukt dat, dan krijg je een sleutel waarmee je hem op maandagochtend weer kunt ophalen. Waarna je met je ziel onder je arm huiswaarts keert. Dat is niet alleen kunst, dat is ook poëzie.</span></p>",
+    "photoSuffix": "20190723092538_daf096f2"
+  },
+  {
+    "id": 1128,
+    "title": "Cocktails",
+    "subtitle": "Locatie: Cape Lowlands",
+    "description": "<p><span>Hier vind je een groot assortiment aan zowel cocktails met als zonder alcohol. Cheers!</span></p>",
+    "photoSuffix": "20190723100836_01af84ca"
+  },
+  {
+    "id": 1129,
+    "title": "Cocktails",
+    "subtitle": "Locatie: Planet Paradise",
+    "description": "<p><span>Hier vind je een groot assortiment aan zowel cocktails met als zonder alcohol. Cheers!</span></p>",
+    "photoSuffix": "20190723101049_67af9416"
+  }
+]
