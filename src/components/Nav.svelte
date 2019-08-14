@@ -1,6 +1,7 @@
 <script>
 	export let title;
 	export let menuIsActive;
+	export let tvIsActive;
 </script>
 
 <style>
@@ -28,6 +29,6 @@
 
 <nav class="nav" >
 	<img class="nav__icon" src="/icons/menu.svg" alt="menu" on:click="{() => menuIsActive = !menuIsActive}"/>
-	<h1 class="nav__title"> {title} </h1>
-	<img class="nav__icon"/>
+	<h1 class="nav__title" alt="menu icon"> {title} </h1>
+	<img class="nav__icon" src="/icons/tv.svg" alt="fireworks icon" on:click="{() => tvIsActive = !tvIsActive}"/>
 </nav>

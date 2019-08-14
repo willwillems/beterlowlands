@@ -7,10 +7,12 @@
 	}
 
 	#table-wrapper-stage {
-		font-family: "Hanalei";
 		position: sticky;
+		width: 66px;
 		left: 0px;
-		z-index: 10;
+		border: 1px solid black;
+		z-index: 1;
+		border-bottom-width: 0;
 	}
 
 	#table-wrapper-shows {
@@ -19,6 +21,7 @@
 		overflow: scroll;
 		border: 1px solid black;
 		min-height: 500px;
+		border-bottom-width: 0;
 	}
 
 	.time-header__row {
@@ -35,8 +38,10 @@
 	:global(.event-cell) {
 		background-color: white;
 		border: 2px solid black;
-		height: 32px;
+		padding: 0;
+		height: 46px;
 		white-space: nowrap;
+		font-size: 12px; /*1rem;*/
 	}
 
 	:global(.event-cell__img) {
@@ -44,7 +49,16 @@
 		float: left;
 	}
 
-	:global(.event-cell__text) {
+	:global(.event-cell__artist-title) {
+		position: sticky;
+		left: 5px;
+		color: black;
+		vertical-align: middle;
+		margin: 0 3px;
+		font-weight: bold;
+	}
+
+	:global(.event-cell__time) {
 		position: sticky;
 		left: 5px;
 		color: black;
@@ -57,21 +71,32 @@
 		background-color: black;
 	}
 
+	.table-filler {
+		flex-grow: 1; /* let this el fill up the page */
+		display: flex;
+		flex-direction: row;
+		border-right: 1px solid black;
+		border-left: 1px solid black;
+	}
+
+	.table-filler__el {
+		border-right: 1px solid black;
+	}
+	
+
 </style>
 
 <script>
 import StageNameTable from '../components/StageNameTable.svelte';
 import TimeTableDayIndicator from '../components/TimeTableDayIndicator.svelte';
+import ArtistModal from '../components/ArtistModal.svelte';
 
 const events 	= require('../../static/data/events.json')
 const venues 	= require('../../static/data/stages.json')
 const artists = require('../../static/data/artists.json')
 
-const times = new Array(24 * 2 * 4).fill(0).map((el, i) => new Date(1565944200000 + 1000 * 60 * 30 * i))
-
-const random = function () {
-	return Math.max(parseInt(Math.random() * 10), 5)
-}
+const times = new Array(24 * 2 * 3).fill(0).map((el, i) => new Date(1565944200000 + 1000 * 60 * 30 * i))
+let activeArtist = null
 
 const createEventTimes = (events, eventTimes) => {
 	const event = events.shift()
@@ -96,7 +121,7 @@ const createEventTimes = (events, eventTimes) => {
 
 const eventTimes = Object.values(events).map(stageEvents => createEventTimes(stageEvents, []))
 
-const daynames = ['26 NOV - Dag 1', '27 NOV - Dag 2', '28 NOV - Dag 3', '29 NOV - Dag 4']
+const daynames = ['26 NOV - Dag 1', '27 NOV - Dag 2', '28 NOV - Dag 3', 'Naar huis 🏡']
 let activeDay = daynames[0]
 const scrollHandler = e => {
 	if(e.target.scrollLeft < 3000) { return activeDay = daynames[0] }
@@ -105,13 +130,20 @@ const scrollHandler = e => {
 	if(e.target.scrollLeft < 13000) { return activeDay = daynames[3] }
 }
 
+const artistNameMarquee = (artistName, cols) => {
+	const realCols = Math.max(cols - 4, 0) // image takes up four
+	const nameThatFits = artistName.substring(0, realCols * 3)
+	if (nameThatFits === artistName) return artistName
+	return `${nameThatFits}...`
+}
+
 </script>
 
 	<TimeTableDayIndicator day="{activeDay}"></TimeTableDayIndicator>
 	<div id="table-wrapper">
-		<!-- <div id="table-wrapper-stage">
+		<div id="table-wrapper-stage">
 			<StageNameTable/>
-		</div> -->
+		</div>
 		<div id="table-wrapper-shows" on:scroll="{scrollHandler}">
 			<table style="table-layout: fixed ; width: 100%;">
 				<thead>
@@ -123,7 +155,7 @@ const scrollHandler = e => {
 						{/each}
 					</tr>
 					<tr>
-						<td class="table-spacer" colspan="100%"></td>
+						<td class="table-spacer" colspan="870%"></td>
 					</tr>
 				</thead>
 				<tbody>
@@ -138,7 +170,9 @@ const scrollHandler = e => {
 										return `
 											<td class="event-cell" colspan=${event.eventCols} >
 												<img src="http://graph.facebook.com/${artistIdFb}/picture?type=square" class="event-cell__img"/>
-												<span class="event-cell__text">${artistName} ${event.start.substring(11,16)} - ${event.end.substring(11,16)}</span>
+												<span class="event-cell__artist-title">${artistNameMarquee(artistName, event.eventCols)}</span>
+												<br/>
+												<span class="event-cell__time">${event.start.substring(11,16)} - ${event.end.substring(11,16)}</span>
 											</td>
 										`
 									})(event)
@@ -148,6 +182,12 @@ const scrollHandler = e => {
 					{/each}
 				</tbody>
 			</table>	
-		
 		</div>
 	</div>
+	<div class="table-filler">
+		<div class="table-filler__el" style="width: 65px;"></div>
+		<div class="table-filler__el" ></div>
+	</div>
+	{#if activeArtist}
+		<ArtistModal></ArtistModal>
+	{/if}

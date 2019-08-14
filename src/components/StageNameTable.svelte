@@ -1,10 +1,11 @@
 <style>
 .stage-name-cell {
-  background-color: pink;
   text-align: center;
-  border: 2px solid black;
   padding: 2px 5px;
   font-weight: bold;
+  font-family: 'ChicagoFLF';
+  font-size: 10px;
+  height: 46px;
 }
 </style>
 
@@ -14,6 +15,7 @@ const venues 	= require('../../static/data/stages.json')
 </script>
 
 <table>
+  <tr><td class="stage-name-cell" style="height: 36px;"></td></tr> <!-- make space for time bar -->
   {#each Object.values(events) as stage, i}
 		<tr>
 			<td class="stage-name-cell">{(venues.find(venue => venue.id == Object.keys(events)[i]) || {}).title}</td>
