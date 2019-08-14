@@ -11,6 +11,7 @@
 <style>
 	#app {
 		border: 1px solid black;
+		overflow-y: scroll;
 	}
 
 	main {
