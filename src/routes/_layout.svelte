@@ -33,7 +33,7 @@
 
 <div id="app">
 	<Nav title="blokkenschema" bind:menuIsActive bind:tvIsActive ></Nav>
-	{#if menuIsActive} <Menu></Menu> {/if}
+	{#if menuIsActive} <Menu bind:menuIsActive ></Menu> {/if}
 	<main>
 		<slot></slot>
 	</main>

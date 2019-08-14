@@ -1,6 +1,12 @@
 <script>
+  export let menuIsActive;
   const menuItems = [
-    'Blokkenschema', 'Artists', 'Studio', 'About', '', '' 
+    {title: 'Blokkenschema', link: '/'},
+    {title: 'Data', link: '/data'},
+    {title: 'Artists', link: ''},
+    {title: 'About', link: ''},
+    {title: 'Studio', link: ''},
+    {title: 'Contact', link: ''},
   ]
 </script>
 
@@ -40,8 +46,8 @@
 
 <div class="menu" >
   {#each menuItems as item}
-	<div class="menu-tile">
-    { item }
-  </div>
+    <a class="menu-tile" style="background-color: {item.link ? '' : 'gainsboro'}" href="{item.link}" on:click="{() => menuIsActive = false}">
+      { item.title }
+    </a>
   {/each}
 </div>

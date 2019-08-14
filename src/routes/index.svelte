@@ -99,6 +99,7 @@ const times = new Array(24 * 2 * 3).fill(0).map((el, i) => new Date(156594420000
 let activeArtist = null
 
 const createEventTimes = (events, eventTimes) => {
+	if(!events.length) return []
 	const event = events.shift()
 	const eventDuration = new Date(event.end).getTime() - new Date(event.start).getTime()
 	const eventCols = eventDuration / 1000 / 60 / 5
@@ -162,21 +163,25 @@ const artistNameMarquee = (artistName, cols) => {
 					{#each eventTimes as stage, i}
 						<tr>
 							{#each stage as event, i}
-								{@html
-									((event) => {
-										if (!event.id) return event.eventCols ? `<td colspan=${event.eventCols}></td>` : ''
-										const artistName = artists.find(artist => artist.id === event.artistId).title
-										const artistIdFb = (artists.find(artist => artist.id === event.artistId).socialLinkFacebook || '').split('/')[3]
-										return `
-											<td class="event-cell" colspan=${event.eventCols} >
-												<img src="https://graph.facebook.com/${artistIdFb}/picture?type=square" class="event-cell__img"/>
-												<span class="event-cell__artist-title">${artistNameMarquee(artistName, event.eventCols)}</span>
-												<br/>
-												<span class="event-cell__time">${event.start.substring(11,16)} - ${event.end.substring(11,16)}</span>
-											</td>
-										`
-									})(event)
+								{#if !event.id}
+									{@html event.eventCols ? `<td colspan=${event.eventCols}></td>` : ''}
+								{:else if event}
+									<td class="event-cell" colspan={event.eventCols} on:click="{() => activeArtist = artists.find(artist => artist.id === event.artistId)}">
+									{@html
+										(() => {
+											const artist = artists.find(artist => artist.id === event.artistId)
+											const artistName = artist.title
+											const artistIdFb = (artist.socialLinkFacebook || '').split('/')[3]
+											return `
+													<img src="https://graph.facebook.com/${artistIdFb}/picture?type=square" class="event-cell__img"/>
+													<span class="event-cell__artist-title">${artistNameMarquee(artistName, event.eventCols)}</span>
+													<br/>
+													<span class="event-cell__time">${event.start.substring(11,16)} - ${event.end.substring(11,16)}</span>
+											`
+										})()
 									}
+									</td>
+								{/if}
 							{/each}
 						</tr>
 					{/each}
@@ -189,5 +194,5 @@ const artistNameMarquee = (artistName, cols) => {
 		<div class="table-filler__el" ></div>
 	</div>
 	{#if activeArtist}
-		<ArtistModal></ArtistModal>
+		<ArtistModal bind:artist="{activeArtist}"></ArtistModal>
 	{/if}
