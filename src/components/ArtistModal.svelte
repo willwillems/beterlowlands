@@ -29,6 +29,7 @@
   text-align: center;
   border-bottom: 2px solid black;
   overflow: hidden;
+  font-family: 'ChicagoFLF';
 }
 
 .artist-modal__bar > div {
@@ -41,12 +42,12 @@
 }
 
 .artist-modal__bar > div b {
-  height: 14px;
+  height: 15px;
   background: white;
-  padding: 0 2px;
-  line-height: 14px;
+  padding: 0 4px;
+  line-height: 15px;
   display: inline-block;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .artist-modal__bar > button {
