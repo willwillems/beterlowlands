@@ -17,7 +17,7 @@
 		background-color: white;
 		overflow-y: scroll;
 		position: relative;
-		height: calc(100vh - 40px);
+		height: calc(100vh - 50px);
 		display: flex;
 		flex-direction: column;
 	}

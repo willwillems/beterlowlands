@@ -10,7 +10,7 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		height: 40px;
+		height: 50px;
 		padding: 3px 10px;
 		border: solid 1px black;
 	}
