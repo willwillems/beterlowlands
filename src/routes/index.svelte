@@ -169,7 +169,7 @@ const artistNameMarquee = (artistName, cols) => {
 										const artistIdFb = (artists.find(artist => artist.id === event.artistId).socialLinkFacebook || '').split('/')[3]
 										return `
 											<td class="event-cell" colspan=${event.eventCols} >
-												<img src="http://graph.facebook.com/${artistIdFb}/picture?type=square" class="event-cell__img"/>
+												<img src="https://graph.facebook.com/${artistIdFb}/picture?type=square" class="event-cell__img"/>
 												<span class="event-cell__artist-title">${artistNameMarquee(artistName, event.eventCols)}</span>
 												<br/>
 												<span class="event-cell__time">${event.start.substring(11,16)} - ${event.end.substring(11,16)}</span>
