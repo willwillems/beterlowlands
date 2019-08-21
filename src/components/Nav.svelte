@@ -3,9 +3,18 @@
 	export let menuIsActive;
 	export let tvIsActive;
 
+	const artists = require('../../static/data/artists.json')
+
 	const toggleTv = () => {
 		tvIsActive = !tvIsActive
 		window.setTimeout(() => tvIsActive = !tvIsActive, 5000)
+	}
+
+	const searchEvent = () => {
+		const query = prompt('Search: ')
+		const artistId = artists.find(a => a.title.toLowerCase().includes(query.toLowerCase())).id
+		document.getElementById(artistId)
+			.scrollIntoView({behavior: "smooth", block: "nearest", inline: "start"})
 	}
 </script>
 
@@ -35,5 +44,5 @@
 <nav class="nav" >
 	<img class="nav__icon" src="/icons/menu.svg" alt="menu" on:click="{() => menuIsActive = !menuIsActive}"/>
 	<h1 class="nav__title" alt="menu icon"> {title} </h1>
-	<img class="nav__icon" src="/icons/tv.svg" alt="fireworks icon" on:click="{toggleTv}"/>
+	<img class="nav__icon" src="/icons/eye.svg" alt="fireworks icon" on:click="{searchEvent}"/>
 </nav>

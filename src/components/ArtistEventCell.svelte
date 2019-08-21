@@ -16,7 +16,7 @@ const artistNameMarquee = (artistName, cols) => {
 
 </script>
 
-<td class="event-cell" colspan={event.eventCols} on:click>
+<td class="event-cell" id="{artist.id}" colspan={event.eventCols} on:click>
   {#if artistInstagram}
   <img src="/data/images/{artist.id}.jpg" alt="" class="event-cell__img"/>
   {/if}
