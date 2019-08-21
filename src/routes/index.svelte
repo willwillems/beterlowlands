@@ -35,37 +35,6 @@
 		font-weight: normal;
 	}
 
-	:global(.event-cell) {
-		background-color: white;
-		border: 2px solid black;
-		padding: 0;
-		height: 46px;
-		white-space: nowrap;
-		font-size: 12px; /*1rem;*/
-	}
-
-	:global(.event-cell__img) {
-		height: 100%;
-		float: left;
-	}
-
-	:global(.event-cell__artist-title) {
-		position: sticky;
-		left: 5px;
-		color: black;
-		vertical-align: middle;
-		margin: 0 3px;
-		font-weight: bold;
-	}
-
-	:global(.event-cell__time) {
-		position: sticky;
-		left: 5px;
-		color: black;
-		vertical-align: middle;
-		margin: 0 3px;
-	}
-
 	.table-spacer {
 		height: 0px;
 		background-color: black;
@@ -90,6 +59,7 @@
 import StageNameTable from '../components/StageNameTable.svelte';
 import TimeTableDayIndicator from '../components/TimeTableDayIndicator.svelte';
 import ArtistModal from '../components/ArtistModal.svelte';
+import ArtistEventCell from '../components/ArtistEventCell.svelte'
 
 const events 	= require('../../static/data/events.json')
 const venues 	= require('../../static/data/stages.json')
@@ -131,13 +101,6 @@ const scrollHandler = e => {
 	if(e.target.scrollLeft < 13000) { return activeDay = daynames[3] }
 }
 
-const artistNameMarquee = (artistName, cols) => {
-	const realCols = Math.max(cols - 4, 0) // image takes up four
-	const nameThatFits = artistName.substring(0, realCols * 3)
-	if (nameThatFits === artistName) return artistName
-	return `${nameThatFits}...`
-}
-
 </script>
 
 	<TimeTableDayIndicator day="{activeDay}"></TimeTableDayIndicator>
@@ -164,23 +127,10 @@ const artistNameMarquee = (artistName, cols) => {
 						<tr>
 							{#each stage as event, i}
 								{#if !event.id}
-									{@html event.eventCols ? `<td colspan=${event.eventCols}></td>` : ''}
+									<!-- Dont render a cell if it has a 0-width -->
+									{#if event.eventCols} <td colspan={event.eventCols}></td> {/if}
 								{:else if event}
-									<td class="event-cell" colspan={event.eventCols} on:click="{() => activeArtist = artists.find(artist => artist.id === event.artistId)}">
-									{@html
-										(() => {
-											const artist = artists.find(artist => artist.id === event.artistId)
-											const artistName = artist.title
-											const artistIdFb = (artist.socialLinkFacebook || '').split('/')[3]
-											return `
-													<img src="https://graph.facebook.com/${artistIdFb}/picture?type=square" class="event-cell__img"/>
-													<span class="event-cell__artist-title">${artistNameMarquee(artistName, event.eventCols)}</span>
-													<br/>
-													<span class="event-cell__time">${event.start.substring(11,16)} - ${event.end.substring(11,16)}</span>
-											`
-										})()
-									}
-									</td>
+									<ArtistEventCell event="{event}" on:click="{() => activeArtist = artists.find(artist => artist.id === event.artistId)}"></ArtistEventCell>
 								{/if}
 							{/each}
 						</tr>
