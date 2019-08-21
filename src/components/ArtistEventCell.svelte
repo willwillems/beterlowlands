@@ -18,7 +18,7 @@ const artistNameMarquee = (artistName, cols) => {
 
 <td class="event-cell" colspan={event.eventCols} on:click>
   {#if artistInstagram}
-  <img src="/data/images/{artist.id}.jpg" alt="profile pic {artistName}" class="event-cell__img"/>
+  <img src="/data/images/{artist.id}.jpg" alt="" class="event-cell__img"/>
   {/if}
   <span class="event-cell__artist-title">{artistNameMarquee(artistName, event.eventCols)}</span>
   <br/>
