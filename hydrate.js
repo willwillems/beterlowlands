@@ -8,10 +8,13 @@
   const sqliteJson = require('sqlite-json');
   const sqlite3 = require('sqlite3');
 
+  const saveArtistImage = require('./hydrate/getArtistImage')
+
   // define constants
   const scheduleZipUrl = 'https://goevent.s3.amazonaws.com/lowlands/2019/latest/schedule.zip'
   const archiveLocation = '/tmp/schedule-archive'
   const dataDir = 'static/data'
+  const imgDir = 'images'
   const scheduleDbName = 'schedule_0.sqlite'
 
   // get data
@@ -46,7 +49,8 @@
   const getFilePath = filename => `${__dirname}/${dataDir}/${filename}`
   
   // fs does not auto create parent directories when writing to locations with missing ones
-  if(!fso.existsSync(`${__dirname}/${dataDir}`)) (console.info(`creating ${dataDir}`), fso.mkdirSync(`${__dirname}/${dataDir}`))
+  if (!fso.existsSync(`${__dirname}/${dataDir}`)) (console.info(`creating ${dataDir}`), fso.mkdirSync(`${__dirname}/${dataDir}`))
+  if (!fso.existsSync(`${__dirname}/${dataDir}/${imgDir}`)) (console.info(`creating ${dataDir}`), fso.mkdirSync(`${__dirname}/${dataDir}/${imgDir}`))
 
   console.info('processing DB data and exporting to JSON files...')
 
@@ -95,8 +99,12 @@
           photoSuffix: artist['photo_suffix'],
         }))
     )
-    .then(filteredArtists => {
-      return fs.writeFile(getFilePath('artists.json'), JSON.stringify(filteredArtists, null, 2))
+    .then(artists => {
+      // write file to disk and use data to fetch images for artists
+      return Promise.all([
+        fs.writeFile(getFilePath('artists.json'), JSON.stringify(artists, null, 2)),
+        Promise.all(artists.map(artist => saveArtistImage(artist.socialLinkInstagram, getFilePath(`${imgDir}/${artist.id}.jpg`))))
+      ])
     })
     .catch(console.error)
 
