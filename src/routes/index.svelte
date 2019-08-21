@@ -92,7 +92,7 @@ const createEventTimes = (events, eventTimes) => {
 
 const eventTimes = Object.values(events).map(stageEvents => createEventTimes(stageEvents, []))
 
-const daynames = ['26 NOV - Dag 1', '27 NOV - Dag 2', '28 NOV - Dag 3', 'Naar huis 🏡']
+const daynames = ['Fri - Dag 1', 'Sat - Dag 2', 'Sun - Dag 3', 'Naar huis 🏡']
 let activeDay = daynames[0]
 const scrollHandler = e => {
 	if(e.target.scrollLeft < 3000) { return activeDay = daynames[0] }
