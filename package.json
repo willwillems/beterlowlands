@@ -25,8 +25,8 @@
     "sqlite-json": "^1.1.0",
     "sqlite3": "^4.0.9",
     "svelte": "^3.0.0",
-    "svelte-loader": "^2.9.0",
+    "svelte-loader": "^3.1.4",
     "unzipper": "^0.10.3",
-    "webpack": "^4.7.0"
+    "webpack": "^5.75.0"
   }
 }
