@@ -4,11 +4,11 @@
   const fso = require('fs')
   const fs = require('fs').promises
   const unzipper = require('unzipper');
-  const fetch = require('node-fetch')
+  const fetch = require('node-fetch');
   const sqliteJson = require('sqlite-json');
   const sqlite3 = require('sqlite3');
 
-  const saveArtistImage = require('./hydrate/getArtistImage')
+  const saveArtistImage = require('./hydrate/getArtistImage.js')
 
   // define constants
   const scheduleZipUrl = 'https://goevent.s3.amazonaws.com/lowlands/2019/latest/schedule.zip'
@@ -26,6 +26,30 @@
           .pipe(unzipper.Extract({ path: archiveLocation }))
           .on('error', rej)
           .on('finish', res);
+      })
+    })
+    .catch(console.error)
+
+  // get data
+  await fetch("https://app.appmiral.com/api/v6/events/lowlands/editions/lowlands2023/artists?include_history=true&max_per_page=50", {
+    "headers": {
+      "x-protect": "f65e146a223e677b3b44fa133ab0d3ef"
+    }
+  })
+    .then(resp => resp.text())
+    .then(text => {
+      // save response as file
+      return new Promise((res, rej) => {
+        console.info('piping the response body into an unzipper and storing it in temp...')
+        fs.writeFile('/tmp/file.json', text, err => {
+          if (err) {
+            console.error('Error saving file:', err);
+            rej()
+          } else {
+            console.log('File saved successfully');
+            res()
+          }
+        });
       })
     })
     .catch(console.error)
