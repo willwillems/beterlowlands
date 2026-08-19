@@ -1,0 +1,8 @@
+[build]
+  # hydrate first: artist images are gitignored and regenerated from the
+  # lowlands.nl API, so a fresh CI clone needs them fetched before the build
+  command = "npm run hydrate && npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "24"
