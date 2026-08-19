@@ -4,6 +4,16 @@ A nimble, local-first timetable ("blokkenschema") for the [Lowlands](https://low
 
 Built with [SvelteKit](https://svelte.dev/docs/kit) (Svelte 5) and `adapter-static`. No runtime dependencies.
 
+## Features
+
+- CSS-grid timetable with sticky stage column and time header
+- Day buttons (VR/ZA/ZO) plus a "now" line that auto-scrolls into view during the festival
+- Favorites (★, stored in localStorage) with a my-schedule filter and clash highlighting when two starred acts overlap
+- Search by act, genre, or category
+- Artist modal with set times, bio, YouTube preview, and social links
+- Deep links: `/#act-<id>` opens an act directly
+- Works fully offline once visited (service worker precaches everything)
+
 ## Develop
 
 Requires Node 20.11+ (see `.nvmrc`).

@@ -1,25 +1,16 @@
 <script>
-	import artists from '$lib/data/artists.json'
+	import { ui } from '$lib/state.svelte.js'
 
 	let { title, menuIsActive = $bindable() } = $props()
-
-	const searchEvent = () => {
-		const query = prompt('Search: ')
-		if (!query) return
-		const artist = artists.find(a => a.title.toLowerCase().includes(query.toLowerCase()))
-		if (!artist) return
-		document.getElementById(artist.id)
-			?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
-	}
 </script>
 
 <nav class="nav">
-	<button class="nav__button" onclick={() => menuIsActive = !menuIsActive}>
-		<img class="nav__icon" src="/icons/menu.svg" alt="menu"/>
+	<button class="nav__button" aria-label="menu" onclick={() => menuIsActive = !menuIsActive}>
+		<img class="nav__icon" src="/icons/menu.svg" alt=""/>
 	</button>
 	<h1 class="nav__title"> {title} </h1>
-	<button class="nav__button" onclick={searchEvent}>
-		<img class="nav__icon" src="/icons/eye.svg" alt="search"/>
+	<button class="nav__button" aria-label="zoeken" onclick={() => ui.searchOpen = !ui.searchOpen}>
+		<img class="nav__icon" src="/icons/eye.svg" alt=""/>
 	</button>
 </nav>
 

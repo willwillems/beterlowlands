@@ -55,10 +55,14 @@ const saveImage = async (url, filePath) => {
     title: act.title,
     description: act.text || '',
     style: act.subtitle || (act.actGenreItems || []).map(g => g.title).join(', '),
+    category: act.category ? act.category.title : null,
+    genres: (act.actGenreItems || []).map(genre => genre.title),
+    youtubeVideoId: act.youtubeVideoId,
     socialLinkFacebook: act.facebookLink,
     socialLinkTwitter: act.twitterLink,
     socialLinkInstagram: act.instagramLink,
     socialLinkSpotify: act.spotifyLink,
+    socialLinkWebsite: act.websiteLink,
     hasImage: Boolean(act.heroImage),
   }))
 
