@@ -35,6 +35,11 @@ a {
 	color: inherit;
 }
 
+/* iOS Safari paints button text in the system blue by default */
+button {
+	color: inherit;
+}
+
 code {
 	font-family: menlo, inconsolata, monospace;
 	font-size: calc(1em - 2px);

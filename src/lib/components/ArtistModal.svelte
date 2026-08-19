@@ -1,10 +1,22 @@
 <script>
+	import { goto } from '$app/navigation'
+	import { page } from '$app/state'
 	import events from '$lib/data/events.json'
 	import venues from '$lib/data/stages.json'
 	import { weekdayOf } from '$lib/schedule'
-	import { isFavorite, toggleFavorite } from '$lib/state.svelte.js'
+	import { ui, isFavorite, toggleFavorite, scrollToEvent } from '$lib/state.svelte.js'
 
 	let { artist, onclose } = $props()
+
+	const goToSlot = async slot => {
+		onclose()
+		if (page.url.pathname === '/') {
+			scrollToEvent(slot.id)
+		} else {
+			ui.pendingEventId = slot.id
+			await goto('/')
+		}
+	}
 
 	const slots = $derived(
 		Object.values(events).flat()
@@ -41,9 +53,11 @@
 		<ul class="artist-modal__slots">
 			{#each slots as slot}
 				<li>
-					<b>{weekdayOf(slot.start)}</b>
-					{slot.start.substring(11, 16)} – {slot.end.substring(11, 16)}
-					· {venueTitle(slot.venueId)}
+					<button class="artist-modal__slot" onclick={() => goToSlot(slot)}>
+						<b>{weekdayOf(slot.start)}</b>
+						{slot.start.substring(11, 16)} – {slot.end.substring(11, 16)}
+						· {venueTitle(slot.venueId)}
+					</button>
 				</li>
 			{/each}
 		</ul>
@@ -121,6 +135,16 @@
 		padding-left: 18px;
 		font-family: 'ChicagoFLF';
 		font-size: 11px;
+	}
+
+	.artist-modal__slot {
+		appearance: none;
+		background: none;
+		border: none;
+		padding: 0;
+		font: inherit;
+		text-decoration: underline;
+		cursor: pointer;
 	}
 
 	.artist-modal__video {

@@ -8,7 +8,7 @@
 		SLOT_WIDTH, STAGE_COL_WIDTH, TOTAL_SLOTS,
 		minutesSinceStart, minutesToX, nowInAmsterdam, dayIndexAt, days, timeLabel, overlaps,
 	} from '$lib/schedule'
-	import { ui, favorites, isFavorite } from '$lib/state.svelte.js'
+	import { ui, favorites, isFavorite, scrollToEvent } from '$lib/state.svelte.js'
 
 	let { scroller = $bindable(null), onprogress, onopen } = $props()
 
@@ -86,6 +86,11 @@
 		} else if (nowMinutes > 0 && nowMinutes < TOTAL_SLOTS * 5) {
 			// During the festival, land a first-time viewer on "now"
 			scroller.scrollLeft = Math.max(0, minutesToX(nowMinutes) - scroller.clientWidth / 3)
+		}
+		if (ui.pendingEventId) {
+			// a modal slot link navigated here: land on that slot instead
+			scrollToEvent(ui.pendingEventId)
+			ui.pendingEventId = null
 		}
 		reportProgress()
 		return () => { clearInterval(interval); clearTimeout(saveTimer) }

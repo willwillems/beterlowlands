@@ -16,6 +16,7 @@
 	class:fav
 	style="grid-row: {cell.gridRow}; grid-column: {cell.colStart} / span {cell.colSpan};"
 	data-artist-id={artist.id}
+	data-event-id={cell.id}
 	{onclick}
 >
 	{#if artist.hasImage}

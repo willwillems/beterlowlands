@@ -4,6 +4,8 @@ export const ui = $state({
 	searchOpen: false,
 	activeArtistId: null,
 	favoritesOnly: false,
+	// set before navigating to the schedule to scroll to a specific slot on mount
+	pendingEventId: null,
 })
 
 const STORAGE_KEY = 'beterlowlands:favorites'
@@ -22,5 +24,10 @@ export const toggleFavorite = id => {
 
 export const scrollToArtist = id => {
 	document.querySelector(`[data-artist-id="${id}"]`)
+		?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+}
+
+export const scrollToEvent = id => {
+	document.querySelector(`[data-event-id="${id}"]`)
 		?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
 }
