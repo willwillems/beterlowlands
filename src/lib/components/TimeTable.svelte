@@ -74,19 +74,27 @@
 	let nowMinutes = $state(-1)
 	const tick = () => nowMinutes = minutesSinceStart(nowInAmsterdam())
 
+	const SCROLL_KEY = 'beterlowlands:scrollLeft'
+	let saveTimer
+
 	onMount(() => {
 		tick()
 		const interval = setInterval(tick, 30_000)
-		// During the festival, land the viewer on "now"
-		if (nowMinutes > 0 && nowMinutes < TOTAL_SLOTS * 5) {
+		const saved = localStorage.getItem(SCROLL_KEY)
+		if (saved !== null) {
+			scroller.scrollLeft = Number(saved)
+		} else if (nowMinutes > 0 && nowMinutes < TOTAL_SLOTS * 5) {
+			// During the festival, land a first-time viewer on "now"
 			scroller.scrollLeft = Math.max(0, minutesToX(nowMinutes) - scroller.clientWidth / 3)
 		}
-		return () => clearInterval(interval)
+		return () => { clearInterval(interval); clearTimeout(saveTimer) }
 	})
 
 	const scrollHandler = () => {
 		const minutes = ((scroller.scrollLeft + scroller.clientWidth / 3) / SLOT_WIDTH) * 5
 		ondaychange?.(dayIndexAt(minutes))
+		clearTimeout(saveTimer)
+		saveTimer = setTimeout(() => localStorage.setItem(SCROLL_KEY, String(Math.round(scroller.scrollLeft))), 150)
 	}
 </script>
 

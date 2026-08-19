@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte'
 	import artists from '$lib/data/artists.json'
 	import ArtistModal from '$lib/components/ArtistModal.svelte'
 	import { ui } from '$lib/state.svelte.js'
@@ -27,6 +28,26 @@
 		z: 1,
 	})))
 
+	// Dragged icons keep their spot across visits; untouched ones stay on
+	// the default scatter. Applied after mount so hydration matches the
+	// prerendered layout.
+	const POS_KEY = 'beterlowlands:artistPositions'
+	onMount(() => {
+		try {
+			const saved = JSON.parse(localStorage.getItem(POS_KEY) ?? '{}')
+			for (const icon of icons) {
+				const pos = saved[icon.artist.id]
+				if (pos) [icon.x, icon.y] = pos
+			}
+		} catch { /* corrupt storage: keep the default scatter */ }
+	})
+
+	const savePosition = icon => {
+		const saved = JSON.parse(localStorage.getItem(POS_KEY) ?? '{}')
+		saved[icon.artist.id] = [Math.round(icon.x), Math.round(icon.y)]
+		localStorage.setItem(POS_KEY, JSON.stringify(saved))
+	}
+
 	let topZ = $state(2)
 	let drag = null
 
@@ -46,7 +67,9 @@
 	}
 
 	const up = () => {
-		if (drag && !drag.moved) ui.activeArtistId = drag.icon.artist.id
+		if (!drag) return
+		if (drag.moved) savePosition(drag.icon)
+		else ui.activeArtistId = drag.icon.artist.id
 		drag = null
 	}
 </script>
