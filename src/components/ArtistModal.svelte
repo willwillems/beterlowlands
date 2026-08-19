@@ -72,7 +72,9 @@
     <div><b>Artist viewer</b></div>
   </div>
   <div class="artist-modal__content">
-    <img src="https://graph.facebook.com/{(artist.socialLinkFacebook || '').split('/')[3]}/picture?type=square" alt="artist image"/>
+    {#if artist.hasImage}
+    <img src="/data/images/{artist.id}.jpg" alt="{artist.title}" style="max-width: 100%;"/>
+    {/if}
     <h1>{ artist.title }</h1>
     {#if artist.style }<b>{ artist.style }</b>{/if}
     <p>{artist.description.replace(/<[^>]*>?/gm, '')}</p>

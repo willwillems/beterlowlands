@@ -65,7 +65,8 @@ const events 	= require('../../static/data/events.json')
 const venues 	= require('../../static/data/stages.json')
 const artists = require('../../static/data/artists.json')
 
-const times = new Array(24 * 2 * 3).fill(0).map((el, i) => new Date(1565944200000 + 1000 * 60 * 30 * i))
+// Lowlands 2026 — Fri 2026-08-21 10:30 CEST
+const times = new Array(24 * 2 * 3).fill(0).map((el, i) => new Date(1787301000000 + 1000 * 60 * 30 * i))
 let activeArtist = null
 
 const createEventTimes = (events, eventTimes) => {

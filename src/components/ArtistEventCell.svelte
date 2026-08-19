@@ -5,7 +5,6 @@ const artists = require('../../static/data/artists.json')
 
 const artist = artists.find(artist => artist.id === event.artistId)
 const artistName = artist.title
-const artistInstagram = artist.socialLinkInstagram
 
 const artistNameMarquee = (artistName, cols) => {
 	const realCols = Math.max(cols - 4, 0) // image takes up four
@@ -17,7 +16,7 @@ const artistNameMarquee = (artistName, cols) => {
 </script>
 
 <td class="event-cell" id="{artist.id}" colspan={event.eventCols} on:click>
-  {#if artistInstagram}
+  {#if artist.hasImage}
   <img src="/data/images/{artist.id}.jpg" alt="" class="event-cell__img"/>
   {/if}
   <span class="event-cell__artist-title">{artistNameMarquee(artistName, event.eventCols)}</span>

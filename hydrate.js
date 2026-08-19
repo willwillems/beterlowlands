@@ -1,126 +1,124 @@
-(async () => {
-  'use strict'
-  // import libs
-  const fso = require('fs')
-  const fs = require('fs').promises
-  const unzipper = require('unzipper');
-  const fetch = require('node-fetch')
-  const sqliteJson = require('sqlite-json');
-  const sqlite3 = require('sqlite3');
+'use strict'
+// Hydrates static/data from the lowlands.nl Wagtail API.
+// The old goevent.s3 schedule.zip pipeline died after 2019; the current site
+// exposes every act (times, stage, images, socials) at /api/pages/.
+// Zero dependencies — requires Node 18+ (native fetch).
 
-  const saveArtistImage = require('./hydrate/getArtistImage')
+const fs = require('fs/promises')
+const path = require('path')
 
-  // define constants
-  const scheduleZipUrl = 'https://goevent.s3.amazonaws.com/lowlands/2019/latest/schedule.zip'
-  const archiveLocation = '/tmp/schedule-archive'
-  const dataDir = 'static/data'
-  const imgDir = 'images'
-  const scheduleDbName = 'schedule_0.sqlite'
+const API_BASE = 'https://lowlands.nl'
+const PAGE_SIZE = 100
+const DATA_DIR = path.join(__dirname, 'static', 'data')
+const IMG_DIR = path.join(DATA_DIR, 'images')
+const IMG_CONCURRENCY = 8
 
-  // get data
-  await fetch(scheduleZipUrl)
-    .then(resp => {
-      return new Promise((res, rej) => {
-        console.info('piping the response body into an unzipper and storing it in temp...')
-        resp.body
-          .pipe(unzipper.Extract({ path: archiveLocation }))
-          .on('error', rej)
-          .on('finish', res);
+const fetchJson = async url => {
+  const resp = await fetch(url, { headers: { 'User-Agent': 'beterlowlands-hydrate' } })
+  if (!resp.ok) throw new Error(`${resp.status} for ${url}`)
+  return resp.json()
+}
+
+const fetchAllActs = async () => {
+  const acts = []
+  for (let offset = 0; ; offset += PAGE_SIZE) {
+    const page = await fetchJson(`${API_BASE}/api/pages/?type=acts.ActPage&fields=*&limit=${PAGE_SIZE}&offset=${offset}`)
+    acts.push(...page.items)
+    console.info(`fetched ${acts.length}/${page.meta.totalCount} acts`)
+    if (acts.length >= page.meta.totalCount) return acts
+  }
+}
+
+// The API returns UTC timestamps; the app renders naive local strings.
+const toLocalDateTime = iso => {
+  const parts = new Intl.DateTimeFormat('sv-SE', {
+    timeZone: 'Europe/Amsterdam',
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', second: '2-digit',
+    hour12: false,
+  }).format(new Date(iso))
+  return parts // sv-SE locale formats as "YYYY-MM-DD HH:MM:SS"
+}
+
+const saveImage = async (url, filePath) => {
+  const resp = await fetch(url, { headers: { 'User-Agent': 'beterlowlands-hydrate' } })
+  if (!resp.ok) throw new Error(`${resp.status} for ${url}`)
+  await fs.writeFile(filePath, Buffer.from(await resp.arrayBuffer()))
+}
+
+;(async () => {
+  await fs.mkdir(IMG_DIR, { recursive: true })
+
+  const acts = await fetchAllActs()
+
+  const artists = acts.map(act => ({
+    id: act.id,
+    title: act.title,
+    description: act.text || '',
+    style: act.subtitle || (act.actGenreItems || []).map(g => g.title).join(', '),
+    socialLinkFacebook: act.facebookLink,
+    socialLinkTwitter: act.twitterLink,
+    socialLinkInstagram: act.instagramLink,
+    socialLinkSpotify: act.spotifyLink,
+    hasImage: Boolean(act.heroImage),
+  }))
+
+  const stages = [...new Map(
+    acts.filter(act => act.location).map(act => [act.location.id, act.location])
+  ).values()]
+    .sort((a, b) => a.position - b.position)
+    .map(loc => ({ id: loc.id, title: loc.title, subtitle: '', description: '' }))
+
+  const events = {}
+  for (const stage of stages) events[stage.id] = []
+  for (const act of acts) {
+    if (!act.location) continue
+    for (const slot of act.actDateItems || []) {
+      events[act.location.id].push({
+        artistId: act.id,
+        id: slot.id,
+        venueId: act.location.id,
+        start: toLocalDateTime(slot.startDate),
+        end: toLocalDateTime(slot.endDate),
       })
+    }
+  }
+  // A cancelled act's page can linger in the API with a stale time slot (its
+  // replacement gets published later). On overlap, keep the newer page.
+  const publishedAt = new Map(acts.map(act => [act.id, act.meta.lastPublishedAt]))
+  const titleOf = id => acts.find(act => act.id === id).title
+  for (const venueId of Object.keys(events)) {
+    events[venueId].sort((a, b) => a.start.localeCompare(b.start))
+    events[venueId] = events[venueId].filter((event, i, list) => {
+      const rival = list.find((other, j) => j !== i && other.start < event.end && event.start < other.end)
+      if (!rival) return true
+      const keep = publishedAt.get(event.artistId) >= publishedAt.get(rival.artistId)
+      if (!keep) console.info(`dropping "${titleOf(event.artistId)}" (overlaps newer "${titleOf(rival.artistId)}")`)
+      return keep
     })
-    .catch(console.error)
-
-  console.info('setting up the sqlite database...')
-
-  // import data
-  const db = new sqlite3.Database(`${archiveLocation}/${scheduleDbName}`)
-  const exporter = sqliteJson(db)
-
-  // get all the table data as JSON 
-  const getTableAsJSON = table => {
-    return new Promise((res, rej) => {
-      exporter.json(`select * FROM ${table}`, (err, json) => {
-        return err ? rej(err) : res(JSON.parse(json))
-      })
-    })
+    if (!events[venueId].length) delete events[venueId]
   }
 
-  // get filepath for JSON data
-  const getFilePath = filename => `${__dirname}/${dataDir}/${filename}`
-  
-  // fs does not auto create parent directories when writing to locations with missing ones
-  if (!fso.existsSync(`${__dirname}/${dataDir}`)) (console.info(`creating ${dataDir}`), fso.mkdirSync(`${__dirname}/${dataDir}`))
-  if (!fso.existsSync(`${__dirname}/${dataDir}/${imgDir}`)) (console.info(`creating ${dataDir}`), fso.mkdirSync(`${__dirname}/${dataDir}/${imgDir}`))
+  await Promise.all([
+    fs.writeFile(path.join(DATA_DIR, 'events.json'), JSON.stringify(events, null, 2)),
+    fs.writeFile(path.join(DATA_DIR, 'artists.json'), JSON.stringify(artists, null, 2)),
+    fs.writeFile(path.join(DATA_DIR, 'stages.json'), JSON.stringify(stages, null, 2)),
+  ])
+  console.info(`wrote ${artists.length} artists, ${Object.keys(events).length} stages with shows`)
 
-  console.info('processing DB data and exporting to JSON files...')
-
-  getTableAsJSON('Shows')
-    // filter out the keys we don't need and change other keys to camelCase
-    .then(shows => shows
-      .map(show => ({
-        artistId: show['object_id'],
-        id: show['_id'],
-        venueId: show['venue_id'],
-        start: `${show['date_start']} ${show['time_start']}`,
-        end: `${show['date_end']} ${show['time_end']}`,
-      }))
-    )
-    // group shows by venue ID
-    .then(filteredShows => filteredShows
-      .reduce((red, show) => ({
-        ...red,
-        [show.venueId]: [show, ...(red[show.venueId] || [])]
-      }), {})
-    )
-    // sort shows by start date :( JS sort modifies original object
-    .then(groupedShows => {
-      Object.keys(groupedShows).forEach(key => {
-        groupedShows[key].sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime())
-      })
-      return groupedShows
-    })
-    .then(sortedShows => {
-      // save filtered shows
-      return fs.writeFile(getFilePath('events.json'), JSON.stringify(sortedShows, null, 2))
-    })
-    .catch(console.error)
-
-  getTableAsJSON('Artists')
-    // filter out the keys we don't need and change other keys to camelCase
-    .then(artists => artists
-      .map(artist => ({
-          id: artist['_id'],
-          title: artist['title'],
-          description: artist['description'],
-          style: artist['style'],
-          socialLinkFacebook: artist['link3'],
-          socialLinkTwitter: artist['link4'],
-          socialLinkInstagram: artist['link6'],
-          photoSuffix: artist['photo_suffix'],
-        }))
-    )
-    .then(artists => {
-      // write file to disk and use data to fetch images for artists
-      return Promise.all([
-        fs.writeFile(getFilePath('artists.json'), JSON.stringify(artists, null, 2)),
-        Promise.all(artists.map(artist => saveArtistImage(artist.socialLinkInstagram, getFilePath(`${imgDir}/${artist.id}.jpg`))))
-      ])
-    })
-    .catch(console.error)
-
-  getTableAsJSON('Venues')
-    // filter out the keys we don't need and change other keys to camelCase
-    .then(venues => venues
-      .map(venue => ({
-        id: venue['_id'],
-        title: venue['title'],
-        subtitle: venue['subtitle'],
-        description: venue['description'],
-        photoSuffix: venue['photo_suffix'],
-      }))
-    )
-    .then(filteredVenues => {
-      return fs.writeFile(getFilePath('stages.json'), JSON.stringify(filteredVenues, null, 2))
-    })
-    .catch(console.error)
+  const withImage = acts.filter(act => act.heroImage)
+  let saved = 0
+  const queue = [...withImage]
+  await Promise.all(Array.from({ length: IMG_CONCURRENCY }, async () => {
+    for (let act; (act = queue.shift()); ) {
+      const rendition = act.heroImage.renditions.xs || Object.values(act.heroImage.renditions)[0]
+      try {
+        await saveImage(`${API_BASE}${rendition.src}`, path.join(IMG_DIR, `${act.id}.jpg`))
+        saved++
+      } catch (err) {
+        console.info(`image failed for ${act.title}: ${err.message}`)
+      }
+    }
+  }))
+  console.info(`saved ${saved}/${withImage.length} artist images`)
 })()
