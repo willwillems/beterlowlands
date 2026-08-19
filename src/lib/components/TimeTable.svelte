@@ -10,7 +10,7 @@
 	} from '$lib/schedule'
 	import { ui, favorites, isFavorite } from '$lib/state.svelte.js'
 
-	let { scroller = $bindable(null), ondaychange, onopen } = $props()
+	let { scroller = $bindable(null), onprogress, onopen } = $props()
 
 	const HEADER_HEIGHT = 36
 	const ROW_HEIGHT = 46
@@ -87,12 +87,16 @@
 			// During the festival, land a first-time viewer on "now"
 			scroller.scrollLeft = Math.max(0, minutesToX(nowMinutes) - scroller.clientWidth / 3)
 		}
+		reportProgress()
 		return () => { clearInterval(interval); clearTimeout(saveTimer) }
 	})
 
+	const reportProgress = () => {
+		onprogress?.(((scroller.scrollLeft + scroller.clientWidth / 3) / SLOT_WIDTH) * 5)
+	}
+
 	const scrollHandler = () => {
-		const minutes = ((scroller.scrollLeft + scroller.clientWidth / 3) / SLOT_WIDTH) * 5
-		ondaychange?.(dayIndexAt(minutes))
+		reportProgress()
 		clearTimeout(saveTimer)
 		saveTimer = setTimeout(() => localStorage.setItem(SCROLL_KEY, String(Math.round(scroller.scrollLeft))), 150)
 	}

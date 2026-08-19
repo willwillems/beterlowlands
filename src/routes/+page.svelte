@@ -6,11 +6,12 @@
 	import DayNav from '$lib/components/DayNav.svelte'
 	import ArtistModal from '$lib/components/ArtistModal.svelte'
 	import SearchOverlay from '$lib/components/SearchOverlay.svelte'
-	import { days, minutesToX, minutesSinceStart } from '$lib/schedule'
+	import { days, minutesToX, minutesSinceStart, dayIndexAt } from '$lib/schedule'
 	import { ui, scrollToArtist } from '$lib/state.svelte.js'
 
 	let scroller = $state(null)
-	let activeDay = $state(0)
+	let scrollMinutes = $state(0)
+	const activeDay = $derived(dayIndexAt(scrollMinutes))
 
 	const activeArtist = $derived(artists.find(artist => artist.id === ui.activeArtistId) ?? null)
 
@@ -34,8 +35,8 @@
 	})
 </script>
 
-<DayNav {activeDay} onjump={jumpToDay} />
-<TimeTable bind:scroller ondaychange={day => activeDay = day} onopen={id => ui.activeArtistId = id} />
+<DayNav {scrollMinutes} {activeDay} onjump={jumpToDay} />
+<TimeTable bind:scroller onprogress={minutes => scrollMinutes = minutes} onopen={id => ui.activeArtistId = id} />
 
 {#if ui.searchOpen}
 	<SearchOverlay />
