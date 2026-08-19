@@ -4,7 +4,7 @@
 	const menuItems = [
 		{ title: 'Blokkenschema', link: '/' },
 		{ title: 'Data', link: '/data' },
-		{ title: 'Artists', link: '' },
+		{ title: 'Artists', link: '/artists' },
 		{ title: 'About', link: '' },
 		{ title: 'Studio', link: '' },
 		{ title: 'Contact', link: '' },
