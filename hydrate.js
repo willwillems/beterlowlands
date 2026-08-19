@@ -1,16 +1,15 @@
-'use strict'
-// Hydrates static/data from the lowlands.nl Wagtail API.
+// Hydrates the app's data from the lowlands.nl Wagtail API.
 // The old goevent.s3 schedule.zip pipeline died after 2019; the current site
 // exposes every act (times, stage, images, socials) at /api/pages/.
-// Zero dependencies — requires Node 18+ (native fetch).
+// Zero dependencies — requires Node 20.11+ (native fetch, import.meta.dirname).
 
-const fs = require('fs/promises')
-const path = require('path')
+import fs from 'node:fs/promises'
+import path from 'node:path'
 
 const API_BASE = 'https://lowlands.nl'
 const PAGE_SIZE = 100
-const DATA_DIR = path.join(__dirname, 'static', 'data')
-const IMG_DIR = path.join(DATA_DIR, 'images')
+const DATA_DIR = path.join(import.meta.dirname, 'src', 'lib', 'data')
+const IMG_DIR = path.join(import.meta.dirname, 'static', 'data', 'images')
 const IMG_CONCURRENCY = 8
 
 const fetchJson = async url => {

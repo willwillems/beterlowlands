@@ -1,10 +1,14 @@
 <script>
-	export let day;
+	let { day } = $props()
 </script>
+
+<div class="day-indicator">
+	<h2 class="day-indicator__title"> {day} </h2>
+</div>
 
 <style>
 	.day-indicator {
-    width: 100%;
+		width: 100%;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -12,7 +16,7 @@
 		height: 40px;
 		padding: 3px 10px;
 		border: solid 1px black;
-  }
+	}
 
 	.day-indicator__title {
 		font-size: 1rem;
@@ -20,7 +24,3 @@
 		padding: 0;
 	}
 </style>
-
-<div class="day-indicator" >
-  <h2 class="day-indicator__title"> {day} </h2>
-</div>
