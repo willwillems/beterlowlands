@@ -15,25 +15,24 @@
 </div>
 
 <style>
+	/* Mobile-first: one full-viewport app frame, identical on desktop */
 	#app {
 		border: 1px solid black;
-		overflow-y: scroll;
+		height: 100vh;
+		height: 100dvh;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		background-color: white;
 	}
 
 	main {
 		background-color: white;
-		overflow-y: scroll;
 		position: relative;
-		height: calc(100vh - 50px);
+		flex: 1;
+		min-height: 0;
 		display: flex;
 		flex-direction: column;
-	}
-
-	@media (min-width: 600px) {
-		#app {
-			width: 360px;
-			height: 582px;
-			margin: 80px auto;
-		}
+		overflow: hidden;
 	}
 </style>

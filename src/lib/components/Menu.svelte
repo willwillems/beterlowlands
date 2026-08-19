@@ -13,41 +13,36 @@
 
 <div class="menu">
 	{#each menuItems as item}
-		<a class="menu-tile" style="background-color: {item.link ? '' : 'gainsboro'}" href={item.link} onclick={onnavigate}>
+		<a class="menu-tile" class:disabled={!item.link} href={item.link} onclick={onnavigate}>
 			{ item.title }
 		</a>
 	{/each}
 </div>
 
 <style>
+	/* Overlays everything below the nav bar; 2×3 tile grid at every size */
 	.menu {
 		position: absolute;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-content: flex-start;
-		width: 100%;
-		height: calc(100vh - 50px);
+		top: 50px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 15;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(3, 1fr);
 	}
 
 	.menu-tile {
-		width: calc(50vw - 1px);
-		height: 33%;
 		background-color: white;
 		border: solid 1px black;
-		z-index: 10;
 		padding: 20px 30px;
 		margin: 0;
+		display: flex;
+		align-items: flex-start;
 	}
 
-	@media (min-width: 600px) {
-		.menu {
-			max-width: 360px;
-		}
-
-		.menu-tile {
-			width: 180px;
-			height: 180px;
-		}
+	.menu-tile.disabled {
+		background-color: gainsboro;
 	}
 </style>

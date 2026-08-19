@@ -92,6 +92,7 @@
 		z-index: 100;
 		display: flex;
 		flex-direction: column;
+		outline: none;
 	}
 
 	@media (min-width: 600px) {
@@ -115,10 +116,9 @@
 	}
 
 	.artist-modal__slots {
-		list-style: none;
+		list-style: square;
 		margin: 8px 0;
-		padding: 6px 8px;
-		border: 1px solid black;
+		padding-left: 18px;
 		font-family: 'ChicagoFLF';
 		font-size: 11px;
 	}
