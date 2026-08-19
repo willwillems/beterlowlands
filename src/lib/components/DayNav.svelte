@@ -47,7 +47,7 @@
 		flex-direction: row;
 		align-items: stretch;
 		height: 40px;
-		padding: 6px 10px;
+		padding: 0;
 		border: solid 1px black;
 	}
 
@@ -55,7 +55,6 @@
 		flex: 1;
 		display: flex;
 		position: relative;
-		border: 2px solid black;
 	}
 
 	.minimap__segment {
@@ -95,8 +94,7 @@
 		background: none;
 		border: none;
 		border-left: 2px solid black;
-		margin-left: 10px;
-		padding: 0 4px 0 12px;
+		padding: 0 12px;
 		cursor: pointer;
 	}
 
