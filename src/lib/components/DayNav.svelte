@@ -74,7 +74,7 @@
 	}
 
 	.minimap__segment.active {
-		background: antiquewhite;
+		background: #d2d2d2;
 	}
 
 	.minimap__cursor {
