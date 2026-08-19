@@ -62,7 +62,7 @@
 		appearance: none;
 		font-family: 'ChicagoFLF';
 		font-size: 13px;
-		background: white;
+		background: #d2d2d2;
 		border: none;
 		border-right: 2px solid black;
 		padding: 0;
@@ -74,7 +74,7 @@
 	}
 
 	.minimap__segment.active {
-		background: #d2d2d2;
+		background: white;
 	}
 
 	.minimap__cursor {
