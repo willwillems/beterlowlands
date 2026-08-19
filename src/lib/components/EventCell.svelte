@@ -1,5 +1,5 @@
 <script>
-	let { cell, artist, fav, clash, dimmed, onclick } = $props()
+	let { cell, artist, fav, dimmed, onclick } = $props()
 
 	const artistNameMarquee = (artistName, cols) => {
 		const realCols = Math.max(cols - 4, 0) // image takes up four
@@ -12,7 +12,6 @@
 <button
 	class="event-cell"
 	class:dimmed
-	class:clash
 	class:fav
 	style="grid-row: {cell.gridRow}; grid-column: {cell.colStart} / span {cell.colSpan};"
 	data-artist-id={artist.id}
@@ -45,11 +44,6 @@
 	.event-cell.dimmed {
 		opacity: 0.25;
 		filter: grayscale(1);
-	}
-
-	.event-cell.clash {
-		border-color: #d0342c;
-		box-shadow: inset 0 0 0 1px #d0342c;
 	}
 
 	.event-cell__img {

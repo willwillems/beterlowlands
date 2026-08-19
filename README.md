@@ -8,7 +8,7 @@ Built with [SvelteKit](https://svelte.dev/docs/kit) (Svelte 5) and `adapter-stat
 
 - CSS-grid timetable with sticky stage column and time header
 - Day buttons (VR/ZA/ZO) plus a "now" line that auto-scrolls into view during the festival
-- Favorites (★, stored in localStorage) with a my-schedule filter and clash highlighting when two starred acts overlap
+- Favorites (★, stored in localStorage) with a my-schedule filter
 - Search by act, genre, or category
 - Artist modal with set times, bio, YouTube preview, and social links
 - Deep links: `/#act-<id>` opens an act directly

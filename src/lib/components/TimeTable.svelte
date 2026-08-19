@@ -6,7 +6,7 @@
 	import EventCell from './EventCell.svelte'
 	import {
 		SLOT_WIDTH, STAGE_COL_WIDTH, TOTAL_SLOTS,
-		minutesSinceStart, minutesToX, nowInAmsterdam, dayIndexAt, days, timeLabel, overlaps,
+		minutesSinceStart, minutesToX, nowInAmsterdam, dayIndexAt, days, timeLabel,
 	} from '$lib/schedule'
 	import { ui, favorites, isFavorite, scrollToEvent } from '$lib/state.svelte.js'
 
@@ -37,12 +37,6 @@
 	// one mark per full hour (grid starts at :30, so the first is 6 slots in)
 	const hourSlots = Array.from({ length: Math.floor((TOTAL_SLOTS - 6) / 12) + 1 }, (_, i) => 6 + i * 12)
 	const dayStartSlots = days.slice(1).map(day => minutesSinceStart(day.start) / 5)
-
-	// Overlapping slots between two favorited acts
-	const clashIds = $derived.by(() => {
-		const favs = cells.filter(cell => favorites.list.includes(cell.artistId))
-		return new Set(favs.filter(a => favs.some(b => b.id !== a.id && overlaps(a, b))).map(cell => cell.id))
-	})
 
 	// Marching-ants paths connecting favorited slots, one smooth curve per day
 	const antPaths = $derived.by(() => {
@@ -126,7 +120,6 @@
 				{cell}
 				artist={artistById.get(cell.artistId)}
 				fav={isFavorite(cell.artistId)}
-				clash={clashIds.has(cell.id)}
 				dimmed={ui.favoritesOnly && !isFavorite(cell.artistId)}
 				onclick={() => onopen?.(cell.artistId)}
 			/>
