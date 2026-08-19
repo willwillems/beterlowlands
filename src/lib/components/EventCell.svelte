@@ -33,6 +33,7 @@
 		text-align: left;
 		background-color: white;
 		border: 2px solid black;
+		margin: 1px; /* acts never touch, like the old table's border-spacing */
 		padding: 0;
 		white-space: nowrap;
 		font-size: 12px;
@@ -51,7 +52,7 @@
 	}
 
 	.event-cell__img {
-		height: 42px; /* row height minus the cell borders */
+		height: 40px; /* row height minus the cell borders and margin */
 		width: auto;
 		object-fit: cover;
 		float: left;
