@@ -6,7 +6,7 @@
 		{ title: 'Data', link: '/data' },
 		{ title: 'Artists', link: '/artists' },
 		{ title: 'About', link: '' },
-		{ title: 'Studio', link: '' },
+		{ title: 'Now', link: '/now' },
 		{ title: 'Contact', link: '' },
 	]
 </script>

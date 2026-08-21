@@ -67,7 +67,8 @@
 	.search__input {
 		font: inherit;
 		font-family: 'ChicagoFLF';
-		font-size: 14px;
+		/* anything under 16px makes iOS Safari auto-zoom on focus */
+		font-size: 16px;
 		padding: 10px;
 		border: none;
 		border-bottom: 2px solid black;

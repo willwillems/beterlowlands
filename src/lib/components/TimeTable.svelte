@@ -138,6 +138,11 @@
 			<div class="time-header" style="grid-column: {slot + 2} / span 6; grid-row: 1;">{timeLabel(slot)}</div>
 		{/each}
 
+		<!-- after the headers so it paints over them; before the stage column so it slides under it -->
+		{#if nowMinutes >= 0 && nowMinutes <= TOTAL_SLOTS * 5}
+			<div class="now-label" style="grid-column: {Math.floor(nowMinutes / 5) + 2}; grid-row: 1; transform: translateX({((nowMinutes % 5) / 5) * SLOT_WIDTH + 1}px) translateX(-50%);">{timeLabel(nowMinutes / 5)}</div>
+		{/if}
+
 		{#each venueIds as venueId, row}
 			<div class="stage-name" style="grid-column: 1; grid-row: {row + 2};">{venueTitle(venueId)}</div>
 		{/each}
@@ -213,6 +218,23 @@
 
 	@media (prefers-reduced-motion: reduce) {
 		.ants__dash { animation: none; }
+	}
+
+	.now-label {
+		position: sticky;
+		top: 0;
+		align-self: center;
+		justify-self: start;
+		width: max-content;
+		pointer-events: none;
+		background-color: #d0342c;
+		color: white;
+		font-family: 'ChicagoFLF';
+		font-size: 11px;
+		line-height: 1;
+		padding: 4px 5px 3px;
+		box-shadow: 0 0 0 1px white;
+		z-index: 4;
 	}
 
 	.time-header {

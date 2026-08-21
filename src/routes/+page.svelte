@@ -6,7 +6,7 @@
 	import DayNav from '$lib/components/DayNav.svelte'
 	import ArtistModal from '$lib/components/ArtistModal.svelte'
 	import SearchOverlay from '$lib/components/SearchOverlay.svelte'
-	import { days, minutesToX, minutesSinceStart, dayIndexAt } from '$lib/schedule'
+	import { days, minutesToX, minutesSinceStart, dayIndexAt, nowInAmsterdam, TOTAL_HOURS } from '$lib/schedule'
 	import { ui, scrollToArtist } from '$lib/state.svelte.js'
 
 	let scroller = $state(null)
@@ -16,7 +16,15 @@
 	const activeArtist = $derived(artists.find(artist => artist.id === ui.activeArtistId) ?? null)
 
 	const jumpToDay = i => {
-		scroller?.scrollTo({ left: minutesToX(minutesSinceStart(days[i].start)), behavior: 'smooth' })
+		if (!scroller) return
+		// Jumping to the day that's happening right now lands on the
+		// now-cursor instead of the day start.
+		const now = minutesSinceStart(nowInAmsterdam())
+		const isCurrentDay = now >= 0 && now <= TOTAL_HOURS * 60 && dayIndexAt(now) === i
+		const left = isCurrentDay
+			? Math.max(0, minutesToX(now) - scroller.clientWidth / 3)
+			: minutesToX(minutesSinceStart(days[i].start))
+		scroller.scrollTo({ left, behavior: 'smooth' })
 	}
 
 	// Deep links: /#act-<id> opens that act's modal

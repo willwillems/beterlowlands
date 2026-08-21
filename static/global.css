@@ -18,6 +18,8 @@ body {
 
 * {
 	box-sizing: border-box;
+	/* kill iOS double-tap zoom; panning/scrolling stays untouched */
+	touch-action: manipulation;
 }
 
 h1, h2, h3, h4, h5, h6 {
