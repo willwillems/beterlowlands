@@ -235,11 +235,11 @@
 		font-family: 'ChicagoFLF';
 		font-size: 11px;
 		line-height: 1;
-		padding: 0 5px;
-		border-left: 1px solid black;
-		border-right: 1px solid black;
-		/* matches the header's own bottom rule */
-		border-bottom: 2px solid black;
+		/* the top padding drops the pixel font's baseline onto the strip's */
+		padding: 6px 9px 0;
+		/* same weight as the rules bounding the strip; the top edge borrows the one above it */
+		border: 2px solid black;
+		border-top: none;
 		z-index: 4;
 	}
 
