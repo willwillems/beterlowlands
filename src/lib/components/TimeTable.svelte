@@ -232,8 +232,9 @@
 		pointer-events: none;
 		background-color: #d0342c;
 		color: black;
-		font-family: 'ChicagoFLF';
-		font-size: 11px;
+		/* the strip's own face, bolded */
+		font-size: 13px;
+		font-weight: bold;
 		line-height: 1;
 		padding: 0 10px;
 		/* same weight as the rules bounding the strip; the top edge borrows the one above it */
