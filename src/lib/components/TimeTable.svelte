@@ -235,8 +235,7 @@
 		font-family: 'ChicagoFLF';
 		font-size: 11px;
 		line-height: 1;
-		/* the top padding drops the pixel font's baseline onto the strip's */
-		padding: 6px 9px 0;
+		padding: 0 10px;
 		/* same weight as the rules bounding the strip; the top edge borrows the one above it */
 		border: 2px solid black;
 		border-top: none;
@@ -246,9 +245,11 @@
 	.time-header {
 		position: sticky;
 		top: 0;
+		display: flex;
+		align-items: center;
 		background-color: antiquewhite;
 		border-bottom: 2px solid black;
-		padding: 6px 5px;
+		padding: 0 5px;
 		font-size: 13px;
 		text-align: left;
 		z-index: 4;
