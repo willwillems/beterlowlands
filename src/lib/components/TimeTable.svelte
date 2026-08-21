@@ -223,17 +223,23 @@
 	.now-label {
 		position: sticky;
 		top: 0;
-		align-self: center;
+		/* fills the header row so it butts against both its edges */
+		align-self: stretch;
 		justify-self: start;
+		display: flex;
+		align-items: center;
 		width: max-content;
 		pointer-events: none;
 		background-color: #d0342c;
-		color: white;
+		color: black;
 		font-family: 'ChicagoFLF';
 		font-size: 11px;
 		line-height: 1;
-		padding: 4px 5px 3px;
-		box-shadow: 0 0 0 1px white;
+		padding: 0 5px;
+		border-left: 1px solid black;
+		border-right: 1px solid black;
+		/* matches the header's own bottom rule */
+		border-bottom: 2px solid black;
 		z-index: 4;
 	}
 
